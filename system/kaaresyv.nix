@@ -9,6 +9,21 @@
   # Bootloader
   boot.loader.gummiboot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Use refind for dual booting
+  #
+  # Install with: 
+  #   > sudo refind-install
+  # 
+  # From: http://www.rodsbooks.com/refind/installing.html
+  #
+  # In case of bus errors this might help 
+  #   > sudo efibootmgr -c -l \\EFI\\refind\\refind_x64.efi -L rEFInd
+  #
+  environment.systemPackages = with pkgs; [
+    refind
+    efibootmgr
+  ];
   
   # Timezone
   time.timeZone = "Europe/Copenhagen";
