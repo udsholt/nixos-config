@@ -10,6 +10,10 @@ let
     airblader    = callPackage ./airblader {};
     font-awesome = callPackage ./font-awesome {};
     sakura       = callPackage ./sakura {};
+
+    goimports = callPackage ./goimports {};
+    gorerun   = callPackage ./gorerun {};
+    gohelpers = callPackage ./gohelpers {};
   };
   
 in {

@@ -1,0 +1,52 @@
+#!/usr/bin/env sh
+
+SYMLINK_LOCATION="$HOME/.gospace"
+SYMLINK_IS_STATIC=false
+SYMLINK_IS_LINK=false
+SYMLINK_TARGET=""
+TARGET_LOCATION=""
+
+if [ -f $SYMLINK_LOCATION ]; then
+    SYMLINK_IS_STATIC=true
+fi
+
+if [ -L $SYMLINK_LOCATION ]; then
+    SYMLINK_IS_LINK=true
+    SYMLINK_TARGET=$(readlink -f $SYMLINK_LOCATION)
+fi
+
+if [ ! -z $1 ]; then
+    TARGET_LOCATION=$(readlink -f $1)
+fi
+
+if $SYMLINK_IS_STATIC; then
+    echo "The location '$SYMLINK_LOCATION' exists but is not a link, aborting!"
+
+    exit 1
+fi
+
+if [ -z $TARGET_LOCATION ]; then
+    if $SYMLINK_IS_LINK; then
+        echo "$SYMLINK_TARGET"
+    else
+        echo ""
+    fi
+
+    exit 0
+fi
+
+if [ ! -d $TARGET_LOCATION ]; then
+    echo "The target directory '$TARGET_LOCATION' does not exist, aborting!"
+
+    exit 1
+fi
+
+if $SYMLINK_IS_LINK; then
+    rm $SYMLINK_LOCATION
+fi
+
+ln -s $TARGET_LOCATION $SYMLINK_LOCATION
+
+echo "Linked: '$SYMLINK_LOCATION' > '$TARGET_LOCATION'"
+
+exit 0
