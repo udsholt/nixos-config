@@ -50,7 +50,23 @@
 
   # Use nvidia binary driver
   # NOTE: this is required for i3bar to work...
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver = {
+    videoDrivers = [ "nvidia" ];
+
+    # Not yet supported
+    /*
+    inputClassSections = [''
+      Identifier "Razer DeathAdder 2013 Slowdown"
+
+      MatchIsPointer "true"
+      MatchProduct   "Razer Razer DeathAdder 2013"
+
+      Option "Device Accel Constant Deceleration" "1.6"
+      Option "Device Accel Adaptive Deceleration" "1.0"
+      Option "Device Accel Velocity Scaling"      "1.1"
+    ''];
+    */
+  };
   
   # Has something to do with loading hardware
   imports = [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix> ];
