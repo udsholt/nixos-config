@@ -1,8 +1,16 @@
 { config, pkgs, ... }:
 
 {
-    containers.postgres = {
+    containers.database = {
         config = { config, pkgs, ... }: {
+            services.mysql = {
+                enable = true;
+                package = pkgs.mysql;
+                dataDir = "/var/lib/mysql";
+                port = 3306;
+                user = "mysql";
+            };
+
             services.postgresql = {
                 enable = true;
                 package = pkgs.postgresql94;
@@ -15,6 +23,13 @@
                     host  all all ::1/128        trust
                     host  all all 192.168.1.0/24 trust
                 '';
+            };
+            
+            services.redis = {
+                enable = true;
+                dbpath = "/var/lib/redis";
+                port = 6379;
+                user = "redis";
             };
         };
     };

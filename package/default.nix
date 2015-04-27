@@ -10,7 +10,7 @@ let
         airblader    = callPackage ./airblader {};
         font-awesome = callPackage ./font-awesome {};
         sakura       = callPackage ./sakura {};
-        # nsq          = callPackage ./nsq {};
+        rtl8723au    = callPackage ./rtl8723au {};
 
         goimports = callPackage ./goimports {};
         gorerun   = callPackage ./gorerun {};

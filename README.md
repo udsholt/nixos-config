@@ -1,1 +1,4 @@
-# nixos-config
+Nixos Configration
+==================
+
+
