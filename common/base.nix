@@ -9,6 +9,11 @@
   # * https://github.com/aszlig/vuizvui
   nixpkgs.config.packageOverrides = import ../override;
 
+  nixpkgs.config.chromium = {
+    enablePepperPDF = true;
+  };
+
+
   # Required for sublime, so just include it everywhere
   # * http://fluffynukeit.com/category/nixos/
   # * https://github.com/NixOS/nixpkgs/issues/4766

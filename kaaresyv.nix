@@ -10,6 +10,7 @@
         ./common/golang.nix
 
         ./container/redis.nix
+        ./container/postgres.nix
         ./container/nsq.nix
     ];
 }
