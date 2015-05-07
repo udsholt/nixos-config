@@ -8,9 +8,9 @@
         ./common/base.nix
         ./common/i3.nix
         ./common/golang.nix
+        ./common/vagrant.nix
 
-        ./container/redis.nix
-        ./container/postgres.nix
         ./container/nsq.nix
+        ./container/database.nix
     ];
 }

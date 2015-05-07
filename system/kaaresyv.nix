@@ -30,42 +30,42 @@
 
   # Filesystem layout
   fileSystems = [
-    {
-      mountPoint = "/";
-      device = "/dev/disk/by-uuid/8235ad87-3695-43cf-883b-a8f06e7da212";
-      fsType = "ext4";
-    } {
-      mountPoint = "/boot";
-      device = "/dev/disk/by-uuid/AF65-ABFA";
-      fsType = "vfat";
-    } {
-      mountPoint = "/home";
-      device = "/dev/disk/by-uuid/6c589480-dcd7-405f-803a-ff1692099fcc";
-      fsType = "ext4";
-    }
+      {
+          mountPoint = "/";
+          device = "/dev/disk/by-uuid/8235ad87-3695-43cf-883b-a8f06e7da212";
+          fsType = "ext4";
+      } {
+          mountPoint = "/boot";
+          device = "/dev/disk/by-uuid/AF65-ABFA";
+          fsType = "vfat";
+      } {
+          mountPoint = "/home";
+          device = "/dev/disk/by-uuid/6c589480-dcd7-405f-803a-ff1692099fcc";
+          fsType = "ext4";
+      }
   ];
-  
+
   # Figure out if i need swap later
   swapDevices = [ ];
 
   # Use nvidia binary driver
   # NOTE: this is required for i3bar to work...
   services.xserver = {
-    videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia" ];
 
-    # Not yet supported
-    /*
-    inputClassSections = [''
-      Identifier "Razer DeathAdder 2013 Slowdown"
+      # Not yet supported
+      /*
+      inputClassSections = [''
+          Identifier "Razer DeathAdder 2013 Slowdown"
 
-      MatchIsPointer "true"
-      MatchProduct   "Razer Razer DeathAdder 2013"
+          MatchIsPointer "true"
+          MatchProduct   "Razer Razer DeathAdder 2013"
 
-      Option "Device Accel Constant Deceleration" "1.6"
-      Option "Device Accel Adaptive Deceleration" "1.0"
-      Option "Device Accel Velocity Scaling"      "1.1"
-    ''];
-    */
+          Option "Device Accel Constant Deceleration" "1.6"
+          Option "Device Accel Adaptive Deceleration" "1.0"
+          Option "Device Accel Velocity Scaling"      "1.1"
+      ''];
+      */
   };
   
   # Has something to do with loading hardware

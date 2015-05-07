@@ -31,10 +31,13 @@
 
     git
     tig
+    mercurial
 
     sakura
 
     chromium
+
+    openvpn
 
     sublime3
     vimNox
