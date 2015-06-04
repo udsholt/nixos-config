@@ -3,8 +3,12 @@
 with pkgs.lib;
 
 {
-	networking.extraHosts = ''
-		127.0.0.1 something
-		...
-	'';
+	services.pcophp = {
+        enable = true;
+        extraLighttpdEvhosts = [];
+    };
+
+    networking.extraHosts = ''
+        127.0.0.1 ...
+    '';
 }
