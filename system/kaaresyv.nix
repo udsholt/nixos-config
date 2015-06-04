@@ -42,6 +42,14 @@
           mountPoint = "/home";
           device = "/dev/disk/by-uuid/6c589480-dcd7-405f-803a-ff1692099fcc";
           fsType = "ext4";
+      } {
+          mountPoint = "/mnt/barracuda_a";
+          device = "/dev/disk/by-uuid/547C1DFB7C1DD896";
+          fsType = "ntfs";
+      } {
+          mountPoint = "/mnt/barracuda_b";
+          device = "/dev/disk/by-uuid/6612D69512D66A17";
+          fsType = "ntfs";
       }
   ];
 

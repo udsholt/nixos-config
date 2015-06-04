@@ -10,6 +10,7 @@
         ./common/golang.nix
         ./common/vagrant.nix
         ./common/steam.nix
+        ./common/plex.nix
 
         ./container/nsq.nix
         ./container/database.nix
