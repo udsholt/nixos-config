@@ -115,7 +115,7 @@ in
         services.lighttpd = {
             enable = true;
             document-root = "/srv/www/default";
-            enableModules = [ "mod_evhost" "mod_accesslog" "mod_setenv" "mod_fastcgi" ];
+            enableModules = [ "mod_evhost" "mod_accesslog" "mod_setenv" "mod_fastcgi" "mod_rewrite" ];
             extraConfig = lighttpdExtraConfig;
         };
 
