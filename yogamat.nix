@@ -11,7 +11,6 @@
         ./common/supplicant.nix
         ./common/vagrant.nix
         ./common/dnsmasq.nix
-        ./common/php.nix
         ./common/pco.nix
         
         ./container/nsq.nix
