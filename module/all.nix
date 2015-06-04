@@ -1,4 +1,4 @@
 [
-  ./airblader
-  ./nsq
+    ./airblader
+    ./nsq
 ]

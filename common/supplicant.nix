@@ -2,13 +2,13 @@
 { pkgs, ... }:
 
 {
-  # Add some basic stuff
-  environment.systemPackages = with pkgs; [
-    wpa_supplicant_gui
-  ];
+    # Add some basic stuff
+    environment.systemPackages = with pkgs; [
+        wpa_supplicant_gui
+    ];
 
-  networking = {
-    wireless.enable = true;
-    wireless.userControlled.enable = true;
-  };
+    networking = {
+        wireless.enable = true;
+        wireless.userControlled.enable = true;
+    };
 }

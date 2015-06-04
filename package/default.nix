@@ -1,3 +1,4 @@
+
 { pkgs ? import <nixpkgs> {} }:
 
 let
@@ -15,6 +16,7 @@ let
         goimports = callPackage ./goimports {};
         gorerun   = callPackage ./gorerun {};
         gohelpers = callPackage ./gohelpers {};
+        gostatus  = callPackage ./gostatus {};
     };
   
 in {

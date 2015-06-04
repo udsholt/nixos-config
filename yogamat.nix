@@ -10,8 +10,16 @@
         ./common/golang.nix
         ./common/supplicant.nix
         ./common/vagrant.nix
-
+        ./common/dnsmasq.nix
+        ./common/php.nix
+        ./common/pco.nix
+        
         ./container/nsq.nix
         ./container/database.nix
+    ];
+
+    environment.systemPackages = with pkgs; [
+        sshfsFuse
+        openvpn
     ];
 }
