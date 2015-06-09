@@ -15,6 +15,8 @@
         
         ./container/nsq.nix
         ./container/database.nix
+        ./container/redis.nix
+        ./container/disque.nix
     ];
 
     environment.systemPackages = with pkgs; [

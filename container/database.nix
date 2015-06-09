@@ -24,13 +24,6 @@
                     host  all all 192.168.1.0/24 trust
                 '';
             };
-            
-            services.redis = {
-                enable = true;
-                dbpath = "/var/lib/redis";
-                port = 6379;
-                user = "redis";
-            };
         };
     };
 }
