@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub }:
+{ stdenv, lib, fetchFromGitHub, fetchgit }:
 
 let
   goDeps = [
@@ -27,6 +27,14 @@ let
         repo = "go";
         rev = "63cf1e6a448b7f45ff62f1813dc514ebec6abb53";
         sha256 = "1pqdbjs1dqsqzv0kqxifq4l4xrajrz44ajjjc64agx8i48776v75";
+      };
+    }
+    {
+      root = "golang.org/x/tools";
+      src = fetchgit {
+        url = "https://go.googlesource.com/tools";
+        rev = "3ecc311976cc3f7c7b7a50314929bdc1b07c4c9d";
+        sha256 = "0ic3lrg6ykxrlnzcway4ka280n052qysjawf4lvj8gl3r1vlmwfg";
       };
     }
   ];

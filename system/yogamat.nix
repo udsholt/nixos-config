@@ -7,7 +7,7 @@
   networking.hostId = "044405fe";
 
   # wpa supplicant wireless interface (not used for wicd)
-  networking.wireless.interfaces = [ "wlp0s26u1u4i2" ];
+  #networking.wireless.interfaces = [ "wlp0s26u1u4i2" ];
 
   # Setup timzone
   time.timeZone = "Europe/Copenhagen";

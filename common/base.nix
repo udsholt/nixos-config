@@ -29,6 +29,7 @@
         unzip
         zip
         nox
+        sshuttle
 
         git
         tig

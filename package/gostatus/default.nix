@@ -1,10 +1,10 @@
-{ stdenv, lib, go, fetchFromGitHub }:
+{ stdenv, lib, go, fetchFromGitHub, fetchgit }:
 
 stdenv.mkDerivation rec {
   name = "gostatus";
 
   src = import ./deps.nix {
-    inherit stdenv lib fetchFromGitHub;
+    inherit stdenv lib fetchFromGitHub fetchgit;
   };
 
   buildInputs = [ go ];

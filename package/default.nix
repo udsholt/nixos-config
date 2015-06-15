@@ -8,11 +8,11 @@ let
 
     # Define custom packages
     self = {
-        airblader       = callPackage ./airblader {};
-        font-awesome    = callPackage ./font-awesome {};
-        sakura          = callPackage ./sakura {};
-        rtl8723au       = callPackage ./rtl8723au {};
-        disque          = callPackage ./disque {};
+        airblader    = callPackage ./airblader {};
+        font-awesome = callPackage ./font-awesome {};
+        sakura       = callPackage ./sakura {};
+        rtl8723au    = callPackage ./rtl8723au {};
+        disque       = callPackage ./disque {};
 
         goimports = callPackage ./goimports {};
         gorerun   = callPackage ./gorerun {};
