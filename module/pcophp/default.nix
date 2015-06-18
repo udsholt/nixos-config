@@ -6,6 +6,11 @@ let
     cfg = config.services.pcophp;
 
     lighttpdExtraConfig = ''
+        mimetype.assign += (
+          ".js" => "text/javascript",
+          ".svg" => "image/svg+xml"
+        )
+
         fastcgi.server += ( 
             ".php" => (
                 "localhost" => ( "socket" => "/run/phpfpm/localhost.sock" )
