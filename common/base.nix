@@ -32,6 +32,7 @@
         nox
         sshuttle
         pciutils
+        python
 
         git
         tig
