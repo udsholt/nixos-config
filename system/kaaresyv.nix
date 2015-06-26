@@ -1,4 +1,3 @@
-# Nixos configuration for the toaster
 { config, lib, pkgs, ... }:
 
 {

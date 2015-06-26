@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
     name = "i3-airblader";
     url = https://github.com/Airblader/i3.git;
     rev = "75a83a8ef08187a07aa0992b890d346c0d55466f";
-    sha256 = "0249my5r3dv8c4r3v5fd2y2g31lpgsdd66ia986kk0qxz6mssnij";
+    sha256 = "0l39b5afk3gd6ny2m9q13p4hjjgp45lf7ir638bgcmzwwsp39v6f";
     leaveDotGit = true;
   };
 
@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
   # * https://github.com/Airblader/i3/issues/26
   configurePhase = ''
     makeFlags=PREFIX=$out;
-    git tag ${version}
   '';
 
   postInstall = ''
