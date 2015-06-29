@@ -8,6 +8,7 @@
         ./common/base.nix
         ./common/i3.nix
         ./common/golang.nix
+        ./common/nodejs.nix
         ./common/networkmanager.nix
         ./common/vagrant.nix
         ./common/dnsmasq.nix

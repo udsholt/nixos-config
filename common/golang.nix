@@ -1,4 +1,3 @@
-# i3 desktop config
 { pkgs, ... }:
 
 {

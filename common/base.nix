@@ -37,6 +37,7 @@
         sakura
 
         chromium
+        spotify
 
         sublime3
         vimNox
