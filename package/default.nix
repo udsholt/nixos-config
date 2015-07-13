@@ -11,6 +11,7 @@ let
         airblader    = callPackage ./airblader {};
         font-awesome = callPackage ./font-awesome {};
         sakura       = callPackage ./sakura {};
+        flashplayer  = callPackage ./flashplayer-11 {};
         rtl8723au    = callPackage ./rtl8723au {};
         disque       = callPackage ./disque {};
 
@@ -18,6 +19,7 @@ let
         gorerun   = callPackage ./gorerun {};
         gohelpers = callPackage ./gohelpers {};
         gostatus  = callPackage ./gostatus {};
+
     };
   
 in {

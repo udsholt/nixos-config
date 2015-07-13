@@ -6,8 +6,9 @@
         
         ./common/user.nix
         ./common/base.nix
-        ./common/i3.nix
         ./common/networkmanager.nix
+        ./common/i3.nix
+        ./common/steam.nix
     ];
 
     environment.systemPackages = with pkgs; [
