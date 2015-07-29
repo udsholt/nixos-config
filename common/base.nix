@@ -13,6 +13,7 @@
     # TODO: move
     nixpkgs.config.chromium = {
         enablePepperPDF = true;
+        enableWideVine = true;
     };
 
     # Required for sublime, so just include it everywhere

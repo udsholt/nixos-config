@@ -7,13 +7,14 @@ let
     callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.linuxPackages // pkgs.xlibs // pkgs.gnome // pkgs.pythonPackages // self);
 
     # Define custom packages
-    self = {
-        airblader    = callPackage ./airblader {};
-        font-awesome = callPackage ./font-awesome {};
-        sakura       = callPackage ./sakura {};
-        flashplayer  = callPackage ./flashplayer-11 {};
-        rtl8723au    = callPackage ./rtl8723au {};
-        disque       = callPackage ./disque {};
+    self = rec {
+        airblader     = callPackage ./airblader {};
+        font-awesome  = callPackage ./font-awesome {};
+        sakura        = callPackage ./sakura {};
+        rtl8723au     = callPackage ./rtl8723au {};
+        disque        = callPackage ./disque {};
+        swfdec        = callPackage ./swfdec {};
+        mlt-swf       = callPackage ./mlt-swf {};
 
         goimports = callPackage ./goimports {};
         gorerun   = callPackage ./gorerun {};
