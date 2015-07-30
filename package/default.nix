@@ -20,7 +20,6 @@ let
         gorerun   = callPackage ./gorerun {};
         gohelpers = callPackage ./gohelpers {};
         gostatus  = callPackage ./gostatus {};
-
     };
   
 in {
