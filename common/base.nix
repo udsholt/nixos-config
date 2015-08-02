@@ -34,6 +34,7 @@
 
         git
         tig
+        mercurial
 
         sakura
 
