@@ -25,7 +25,7 @@
     environment.systemPackages = with pkgs; [
         lsof
         tree
-        wget 
+        wget
         which
         unzip
         zip

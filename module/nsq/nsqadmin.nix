@@ -17,7 +17,7 @@ in
                 example = true;
                 description = "Enable nsqadmin";
             };
-            
+
             user = mkOption {
                 type = types.str;
                 default = "nsq";
@@ -78,5 +78,5 @@ in
             };
         };
     };
-    
+
 }

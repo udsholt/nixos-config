@@ -14,7 +14,7 @@ in
                 example = true;
                 description = "Enable nsqlookupd";
             };
-            
+
             user = mkOption {
                 type = types.str;
                 default = "nsq";
@@ -71,5 +71,4 @@ in
             };
         };
     };
-    
 }

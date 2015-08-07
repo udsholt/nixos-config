@@ -3,8 +3,6 @@
 
 {
     # https://nixos.org/wiki/Network_Manager
-
-    
     networking.networkmanager.enable = true;
     services.dbus.enable = true;
     services.openvpn.enable = true;

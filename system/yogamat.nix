@@ -22,7 +22,7 @@
   services.xserver = {
     layout = "dk";
   };
-  
+
   # Enable synaptics touchpad
   services.xserver.synaptics = {
     enable = true;
@@ -56,10 +56,10 @@
     }
   ];
 
-  # Swap 
-  swapDevices = [{ 
+  # Swap
+  swapDevices = [{
     device = "/var/swapfile";
-    size = 8192; 
+    size = 8192;
   }];
 
   # TODO: What does this do?

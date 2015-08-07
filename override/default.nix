@@ -1,8 +1,8 @@
 # From: https://github.com/aszlig/vuizvui
 #
-# I have removed everything related to overrides 
+# I have removed everything related to overrides
 # and left the stuff that was required for custom
-# packages. 
+# packages.
 pkgs:
 
 with pkgs.lib;
@@ -12,5 +12,5 @@ let
     allPackages = (import ../package { pkgs = everything; }).custom;
     everything = pkgs // allPackages;
 
-in 
+in
     allPackages
