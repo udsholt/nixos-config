@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
   
   src = fetchurl {
     url = "https://github.com/lwfinger/rtl8723au/archive/master.zip";
-    sha256 = "09gwrr7qjm1zwfgszp2vc186wwkpp1n75l29wgxby7xixvh64ycc";
+    sha256 = "1k1nnn4j3b4fy2wc3impc5s50mk5wmpcb9p4rvy9i3dxv5akjxqi";
   };
 
   dontStrip = true;

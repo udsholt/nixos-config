@@ -19,6 +19,7 @@
         ./container/database.nix
         ./container/redis.nix
         ./container/disque.nix
+        ./container/elasticsearch.nix
     ];
 
     environment.systemPackages = with pkgs; [

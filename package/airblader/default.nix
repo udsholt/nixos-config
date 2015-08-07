@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
     name = "i3-airblader";
     url = https://github.com/Airblader/i3.git;
     rev = "75a83a8ef08187a07aa0992b890d346c0d55466f";
-    sha256 = "0l39b5afk3gd6ny2m9q13p4hjjgp45lf7ir638bgcmzwwsp39v6f";
+    sha256 = "1wc8nlp9jkn0vpjn2rdhq1ac3ilnq9mr571az16vfl7fw8kkgcw1";
     leaveDotGit = true;
   };
 
