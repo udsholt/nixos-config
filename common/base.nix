@@ -31,6 +31,7 @@
         zip
         nox
         sshuttle
+        pciutils
 
         git
         tig

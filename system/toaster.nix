@@ -28,7 +28,13 @@
     twoFingerScroll = false;
   };
 
-    # GRUB bootloader
+  # Pulse audio
+  hardware.pulseaudio.enable = true;
+  environment.systemPackages = with pkgs; [
+    pavucontrol
+  ];
+
+  # GRUB bootloader
   boot.loader.grub = {
     enable = true;
     device = "/dev/sda";
