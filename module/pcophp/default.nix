@@ -83,14 +83,18 @@ in
         # PHP packages
         environment.systemPackages = with pkgs; [
             pkgs.php
-            pkgs.phpPackages.composer
             pkgs.phpPackages.memcached
             pkgs.phpPackages.redis
         ];
 
         # Enable php extensions
+        # NOTE: i seem to recall digging around in the php source 
+        #       to find the right filename
         environment.etc."php.extra.ini" = {
             text = ''
+            display_errors = on
+            display_startup_errors = on
+            error_reporting = E_ALL | E_STRICT
             date.timezone = "Europe/Copenhagen"
             extension=${pkgs.phpPackages.memcached}/lib/php/extensions/memcached.so
             extension=${pkgs.phpPackages.redis}/lib/php/extensions/redis.so

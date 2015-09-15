@@ -4,13 +4,13 @@
 
 stdenv.mkDerivation rec {
   name = "airblader-${version}";
-  version = "4.10.2";
+  version = "4.10.4";
 
   src = fetchgit {
     name = "i3-airblader";
     url = https://github.com/Airblader/i3.git;
-    rev = "75a83a8ef08187a07aa0992b890d346c0d55466f";
-    sha256 = "1wc8nlp9jkn0vpjn2rdhq1ac3ilnq9mr571az16vfl7fw8kkgcw1";
+    rev = "69eb4619a75e133cb198fa606cc9c9495f641fe5";
+    sha256 = "1h12rlsnfy8wvy024b62lvrwamg4mf5jjc3fcvdflrkd7ln5zmyw";
     leaveDotGit = true;
   };
 
