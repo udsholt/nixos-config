@@ -9,8 +9,16 @@
     # * https://github.com/aszlig/vuizvui
     nixpkgs.config.packageOverrides = import ../override;
 
-    # Using pdf reader in chrome
-    # TODO: move
+    # TODO: consider moving this somewhere else.
+    #
+    # Using pdf reader in chrome.
+    #
+    # If the mirror containing the debian package for google-chrome-stable
+    # is to slow, it can be obtained from somewhere else add preloaded into
+    # the store using (note the location prefix):
+    #
+    # sudo nix-store --add-fixed sha256 ./google-chrome-stable_45.0.2454.85-1_amd64.deb
+    #
     nixpkgs.config.chromium = {
         enablePepperPDF = true;
         enableWideVine = true;
