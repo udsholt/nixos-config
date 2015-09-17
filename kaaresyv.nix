@@ -14,6 +14,7 @@
         ./common/dnsmasq.nix
         ./common/pco.nix
         ./common/firefox.nix
+        ./common/nodejs.nix
 
         ./container/nsq.nix
         ./container/database.nix
