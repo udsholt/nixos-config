@@ -22,7 +22,7 @@ let
         gohelpers = callPackage ./gohelpers {};
         gostatus  = callPackage ./gostatus {};
     };
-  
+
 in {
     custom = self;
 }

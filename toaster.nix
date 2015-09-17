@@ -3,7 +3,7 @@
 {
     require = [
         ./system/toaster.nix
-        
+
         ./common/user.nix
         ./common/base.nix
         ./common/networkmanager.nix

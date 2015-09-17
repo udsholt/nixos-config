@@ -6,14 +6,15 @@
 
         ./common/user.nix
         ./common/base.nix
+        ./common/networkmanager.nix
         ./common/i3.nix
+        ./common/dnsmasq.nix
         ./common/golang.nix
         ./common/nodejs.nix
-        ./common/networkmanager.nix
-        ./common/vagrant.nix
-        ./common/dnsmasq.nix
         ./common/pco.nix
-        ./common/firefox.nix
+        #./common/firefox.nix
+        #./common/vagrant.nix
+        #./common/steam.nix
 
         ./container/nsq.nix
         ./container/database.nix
@@ -27,4 +28,5 @@
         openvpn
         xlibs.xbacklight
     ];
+
 }

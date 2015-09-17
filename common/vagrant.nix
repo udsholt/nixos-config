@@ -8,7 +8,7 @@ with pkgs.lib;
 	  	pkgs.ansible
 	];
 
-	services.virtualboxHost = {
-		enable = true;
-	};
+    virtualisation.virtualbox = {
+        host.enable = true;
+    };
 }
