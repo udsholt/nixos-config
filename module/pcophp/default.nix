@@ -7,8 +7,8 @@ let
 
     lighttpdExtraConfig = ''
         mimetype.assign += (
-          ".json" => "application/json",
-          ".js" => "text/javascript",
+          ".json" => "application/json; charset=utf-8",
+          ".js" => "text/javascript; charset=utf-8",
           ".svg" => "image/svg+xml",
           ".woff" => "application/x-font-woff",
           ".woff2" => "application/x-font-woff"
