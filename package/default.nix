@@ -15,6 +15,7 @@ let
         disque        = callPackage ./disque {};
         swfdec        = callPackage ./swfdec {};
         mlt-swf       = callPackage ./mlt-swf {};
+        pgl           = callPackage ./pgl {};
 
         goimports = callPackage ./goimports {};
         gorerun   = callPackage ./gorerun {};
