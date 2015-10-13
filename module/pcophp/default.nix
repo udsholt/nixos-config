@@ -14,7 +14,7 @@ let
           ".woff2" => "application/x-font-woff"
         )
 
-        fastcgi.server += ( 
+        fastcgi.server += (
             ".php" => (
                 "localhost" => ( "socket" => "/run/phpfpm/localhost.sock" )
             )
@@ -27,7 +27,7 @@ let
 
         $HTTP["host"] =~ "\.lo" {
             index-file.names = ("index.php")
-            evhost.path-pattern = "/srv/www/%2/web/" 
+            evhost.path-pattern = "/srv/www/%2/web/"
             accesslog.filename  = "/srv/www/access.log"
             server.reject-expect-100-with-417 = "disable"
             setenv.add-environment = (
@@ -60,7 +60,7 @@ in
                     ''
                     $HTTP["host"] =~ "\.lo" {
                         index-file.names = ("index.php")
-                        evhost.path-pattern = "/srv/www/%2/web/" 
+                        evhost.path-pattern = "/srv/www/%2/web/"
                         accesslog.filename  = "/srv/www/access.log"
                         server.reject-expect-100-with-417 = "disable"
                         setenv.add-environment = (
@@ -88,7 +88,7 @@ in
         ];
 
         # Enable php extensions
-        # NOTE: i seem to recall digging around in the php source 
+        # NOTE: i seem to recall digging around in the php source
         #       to find the right filename
         environment.etc."php.extra.ini" = {
             text = ''
