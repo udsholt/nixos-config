@@ -9,6 +9,7 @@ let
         mimetype.assign += (
           ".json" => "application/json; charset=utf-8",
           ".js" => "text/javascript; charset=utf-8",
+          ".ico" => "image/x-icon",
           ".svg" => "image/svg+xml",
           ".woff" => "application/x-font-woff",
           ".woff2" => "application/x-font-woff"
@@ -95,6 +96,7 @@ in
             display_errors = on
             display_startup_errors = on
             error_reporting = E_ALL | E_STRICT
+            always_populate_raw_post_data = -1
             date.timezone = "Europe/Copenhagen"
             extension=${pkgs.phpPackages.memcached}/lib/php/extensions/memcached.so
             extension=${pkgs.phpPackages.redis}/lib/php/extensions/redis.so

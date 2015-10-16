@@ -4,13 +4,13 @@
 
 stdenv.mkDerivation rec {
   name = "airblader-${version}";
-  version = "4.10.4";
+  version = "4.11";
 
   src = fetchgit {
     name = "i3-airblader";
     url = https://github.com/Airblader/i3.git;
-    rev = "2f1c242723de589bfc6a4c988a1d805a1eb41586";
-    sha256 = "0q9vayaij6wag1v5j4yy80xgz069kpzw77sjmai0px0c37d0m8f5";
+    rev = "6ea58a840c4f71c398e1d81e91c423c6cbcaa84b";
+    sha256 = "1dj3q9615hkf3d0h804jmk6ddsjlz1znfjl85lzmdxidjv65a0h9";
     leaveDotGit = true;
   };
 
@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
   '';
 
   # Fix for git decribe:
-  # 
+  #
   #   leaveDotGit = true
   #   git tag ${version}
   #
