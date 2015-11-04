@@ -41,6 +41,7 @@
         sshuttle
         pciutils
         python
+        pv
 
         git
         tig
@@ -55,9 +56,14 @@
         vimNox
 
         oxygen_gtk
+        gtk_engines
+        hicolor_icon_theme
+        lxappearance
 
         xfce.thunar
-        xfce.thunar_archive_plugin
+        xfce.xfce4icontheme
+
+        pcmanfm
     ];
 
     # Enable zsh

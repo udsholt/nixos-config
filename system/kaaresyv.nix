@@ -58,6 +58,8 @@
   # Setup xserver
   services.xserver = {
 
+      exportConfiguration = true;
+
       # Use nvidia binary driver
       # NOTE: this is required for i3bar to work!
       videoDrivers = [ "nvidia" ];
@@ -105,9 +107,9 @@
           MatchIsPointer "true"
           MatchProduct   "Razer Razer DeathAdder 2013"
 
-          Option "Device Accel Constant Deceleration" "1.65"
-          Option "Device Accel Adaptive Deceleration" "1.00"
-          Option "Device Accel Velocity Scaling"      "1.10"
+          Option "Device Accel Constant Deceleration" "2.7"
+          Option "Device Accel Adaptive Deceleration" "1.0"
+          Option "Device Accel Velocity Scaling"      "1.6"
       ''];
   };
 

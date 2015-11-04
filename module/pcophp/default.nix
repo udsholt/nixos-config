@@ -97,7 +97,7 @@ in
             display_startup_errors = on
             always_populate_raw_post_data = -1
             error_reporting = E_ALL | E_STRICT
-            always_populate_raw_post_data = -1
+            html_errors = On
             date.timezone = "Europe/Copenhagen"
             extension=${pkgs.phpPackages.memcached}/lib/php/extensions/memcached.so
             extension=${pkgs.phpPackages.redis}/lib/php/extensions/redis.so
