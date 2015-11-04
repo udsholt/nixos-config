@@ -2,9 +2,9 @@
 
 {
     environment.systemPackages = with pkgs; [
-        idea.clion
-        qtcreator
-        qt5Full
+        #idea.clion
+        #qtcreator
+        #qt5Full
 
         clang
         llvmPackages.lldb

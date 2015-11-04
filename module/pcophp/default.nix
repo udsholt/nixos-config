@@ -95,6 +95,7 @@ in
             text = ''
             display_errors = on
             display_startup_errors = on
+            always_populate_raw_post_data = -1
             error_reporting = E_ALL | E_STRICT
             always_populate_raw_post_data = -1
             date.timezone = "Europe/Copenhagen"
@@ -139,5 +140,4 @@ in
             mode = "0400";
         };
     };
-    
 }
