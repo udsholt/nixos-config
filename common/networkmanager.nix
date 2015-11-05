@@ -14,5 +14,14 @@
         gnome.gnome_icon_theme
         gnome3.gnome_themes_standard
     ];
+
+    # FIX:  https://github.com/NixOS/nixpkgs/issues/10689
+    # TODO: remove once it hits unstable
+    users.extraGroups = [{
+      name = "nm-openvpn";
+    }];
+    users.extraUsers = [{
+      name = "nm-openvpn";
+    }];
 }
 
