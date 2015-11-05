@@ -5,10 +5,11 @@
 stdenv.mkDerivation rec {
   name = "airblader-${version}";
   version = "4.11";
+  revision = "a06f51fd20ef7eb374804253761ee6a0450811c1";
 
   src = fetchurl {
-    url = "https://github.com/Airblader/i3/archive/${version}.tar.gz";
-    sha256 = "1kxhcsggj115y2xnw4hxcfzq2ghis2jjwgh9w2jny760dzc89h8f";
+    url = "https://github.com/Airblader/i3/archive/${revision}.tar.gz";
+    sha256 = "1n13jgs0mdzzph8963hhr51ksm1m6dlcsllfi6yzs5vq23hpblkx";
   };
 
   buildInputs = [
