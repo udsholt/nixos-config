@@ -12,6 +12,7 @@
         ./common/golang.nix
         ./common/nodejs.nix
         ./common/pco.nix
+        ./common/cpp.nix
         #./common/firefox.nix
         #./common/vagrant.nix
         #./common/steam.nix

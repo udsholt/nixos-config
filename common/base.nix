@@ -42,6 +42,7 @@
         pciutils
         python
         pv
+        sift
 
         git
         tig
