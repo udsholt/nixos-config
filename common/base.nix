@@ -55,6 +55,7 @@
 
         sublime3
         vimNox
+        atom
 
         oxygen_gtk
         gtk_engines
