@@ -13,15 +13,13 @@
         ./common/nodejs.nix
         ./common/pco.nix
         ./common/cpp.nix
-        #./common/firefox.nix
-        #./common/vagrant.nix
-        #./common/steam.nix
 
         ./container/nsq.nix
         ./container/database.nix
         ./container/redis.nix
         ./container/disque.nix
         ./container/elasticsearch.nix
+        ./container/beanstalkd.nix
     ];
 
     environment.systemPackages = with pkgs; [
@@ -29,5 +27,4 @@
         openvpn
         xlibs.xbacklight
     ];
-
 }
