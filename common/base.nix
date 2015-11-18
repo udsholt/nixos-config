@@ -58,6 +58,8 @@
         atom
 
         oxygen_gtk
+        numix-gtk-theme
+        numix-icon-theme
         gtk_engines
         hicolor_icon_theme
         lxappearance

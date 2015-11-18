@@ -20,5 +20,9 @@
 
     environment.systemPackages = with pkgs; [
         xlibs.xbacklight
+
+        moonlight
+        rustNightly
+        cargoNightly
     ];
 }
