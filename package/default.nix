@@ -18,6 +18,7 @@ let
         swfdec       = callPackage ./swfdec {};
         mlt-swf      = callPackage ./mlt-swf {};
         pgl          = callPackage ./pgl {};
+        sift         = callPackage ./sift {};
         moonlight    = callPackage ./moonlight {};
         goimports    = callPackage ./goimports {};
         gorerun      = callPackage ./gorerun {};

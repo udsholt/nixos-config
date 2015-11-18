@@ -6,8 +6,8 @@ let
         src = fetchFromGitHub {
             owner  = "svent";
             repo   = "sift";
-            rev    = "6e65e425093ea543b2407b9fc6183a1a5e52a6ce";
-            sha256 = "0fvmqcsikydj0mmnymx3vpamj309ksnmfnf8lfwxna7fgmwpbhpi";
+            rev    = "74cb876cf8d6a4fdefcad0c4c0e95f40db3df1de";
+            sha256 = "1kbclfwnl136w80zxmr8k4b2fmazsigqvam8xw108z5pc7mcyfn6";
         };
     }{
         root = "github.com/svent/go-flags";
