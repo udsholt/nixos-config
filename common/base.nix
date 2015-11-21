@@ -58,6 +58,7 @@
         gnome3.file-roller
 
         sublime3
+        atom
         vimNox
         atom
 

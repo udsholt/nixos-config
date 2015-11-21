@@ -15,6 +15,7 @@
         ./common/pco.nix
         ./common/firefox.nix
         ./common/nodejs.nix
+        ./common/cpp.nix
 
         ./container/nsq.nix
         ./container/database.nix
