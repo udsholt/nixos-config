@@ -52,6 +52,7 @@
 
         chromium
         spotify
+        gnome3.file-roller
 
         sublime3
         vimNox
