@@ -47,6 +47,7 @@
         git
         tig
         mercurial
+        subversionClient
 
         sakura
 

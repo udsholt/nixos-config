@@ -32,6 +32,17 @@ let
             date = "2015-11-14";
             hash = "1cz1glfp6d2phz7m6xnpsh22cpcb9r3n8js7i53brzglsasljxla";
         };
+
+        # TODO: this was a patch until unstable is updated, remove this as soon as that is the case
+        bumblebee    = callPackage ./bumblebee {
+            nvidia_x11 = pkgs.linuxPackages.nvidia_x11;
+            nvidia_x11_i686 = if pkgs.system == "x86_64-linux"
+              then pkgs.pkgsi686Linux.linuxPackages.nvidia_x11.override { libsOnly = true; }
+              else null;
+            primusLib_i686 = if pkgs.system == "x86_64-linux"
+              then pkgs.pkgsi686Linux.primusLib
+              else null;
+        };
     };
 
 in {
