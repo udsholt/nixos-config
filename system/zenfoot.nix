@@ -45,6 +45,14 @@
         };
     };
 
+    # Enable primus/optirun (bumblebee) support in steam.
+    #
+    # To acutually use the discreet card for applications, the launch options should be:
+    #
+    #    primusrun %command%
+    #
+    nixpkgs.config.steam.primus = true;
+
     # Danish xserver
     services.xserver = {
         layout = "dk";

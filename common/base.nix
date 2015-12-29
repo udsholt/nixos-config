@@ -43,6 +43,7 @@
         python
         pv
         sift
+        ngrok
 
         git
         tig
