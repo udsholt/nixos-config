@@ -4,13 +4,12 @@ let
     goDeps = [{
         root = "github.com/ddollar/forego";
         src = fetchFromGitHub {
-            owner = "ddollar";
+            owner = "udsholt";
             repo = "forego";
-            rev = "4eaf54121ea534d09e704a1227da35198e1ce283";
-            sha256 = "0j71kwk9s3wnx7wl9fp0wjlmwdx5vjl09rzrz5dbpcr8669n2dy2";
+            rev = "09d2395bae50fd15e382a7983aea75014f99b7e0";
+            sha256 = "1c8qi0fwdf9q14cdwhlhy71js9c6ndx0ns6cffqhj0pl9mh1vdv3";
         };
     }];
-
 in
 
 stdenv.mkDerivation rec {
