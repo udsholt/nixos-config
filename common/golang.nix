@@ -11,5 +11,6 @@
         gorerun
         gohelpers
         gostatus
+        forego
     ];
 }

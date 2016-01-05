@@ -20,6 +20,7 @@ let
         pgl          = callPackage ./pgl {};
         sift         = callPackage ./sift {};
         moonlight    = callPackage ./moonlight {};
+        forego       = callPackage ./forego {};
         goimports    = callPackage ./goimports {};
         gorerun      = callPackage ./gorerun {};
         gohelpers    = callPackage ./gohelpers {};
