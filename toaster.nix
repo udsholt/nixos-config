@@ -11,7 +11,7 @@
         ./common/steam.nix
         ./common/golang.nix
         ./common/cpp.nix
-        ./common/pco.nix
+        # ./common/pco.nix
         ./common/dnsmasq.nix
         ./common/nodejs.nix
 
@@ -21,8 +21,8 @@
     environment.systemPackages = with pkgs; [
         xlibs.xbacklight
 
-        moonlight
-        rustNightly
-        cargoNightly
+        # moonlight
+        # rustNightly
+        # cargoNightly
     ];
 }

@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url = "https://fortawesome.github.io/Font-Awesome/assets/font-awesome-${version}.zip";
     name = "${name}";
-    sha256 = "1lvxs4isrk80cczq6nrxksvqxs04k13i23i6c2l5vmfs2ndjsdm2";
+    sha256 = "0mhd5z88bmcdmyylvp6sgh5a9vibwv9qxcs1a63aydc0jwznjawz";
   };
 
   # Apply only these phases
