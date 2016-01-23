@@ -33,6 +33,7 @@
     environment.systemPackages = with pkgs; [
         lsof
         tree
+        psmisc
         wget
         which
         unzip
@@ -61,14 +62,13 @@
         atom
 
         oxygen_gtk
-        numix-gtk-theme
-        numix-icon-theme
-        gtk_engines
-        hicolor_icon_theme
-        lxappearance
-
-        xfce.thunar
-        xfce.xfce4icontheme
+#        numix-gtk-theme
+#        numix-icon-theme
+#        gtk_engines
+#        hicolor_icon_theme
+#        lxappearance
+#        xfce.thunar
+#        xfce.xfce4icontheme
 
         pcmanfm
     ];

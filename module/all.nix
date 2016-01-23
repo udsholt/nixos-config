@@ -1,5 +1,6 @@
 [
     ./airblader
+    ./dunst
     ./nsq
     ./disque
     ./beanstalkd

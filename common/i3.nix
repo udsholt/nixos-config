@@ -6,6 +6,8 @@
         i3lock
         i3status
         dmenu
+        dunst
+        libnotify
     ];
 
     services.xserver = {
