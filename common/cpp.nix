@@ -6,7 +6,12 @@
         llvmPackages.lldb
 
         gnumake
-        premake
-        cmake
+        premake5
+        premake4
+
+        glm
+        glfw
+        glew
+        mesa
     ];
 }
