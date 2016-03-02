@@ -7,8 +7,8 @@ let
       src = fetchFromGitHub {
         owner = "golang";
         repo = "tools";
-        rev = "b1aed1a596ad02d2aa2eb5c5af431a7ba2f6afc4";
-        sha256 = "1f20r8s63jbafx902iqj286jvb7201nwp7hlxh182i143jg87h1p";
+        rev = "6f233b96dfbc53e33b302e31b88814cf74697ff6";
+        sha256 = "0zpzb1qhwg4nrgji42bzislwypql5kz4zbm0rqzxfn4vdjy0dzml";
       };
     }
   ];

@@ -1,14 +1,21 @@
-
+# Local package definitions, adapted from:
+#
+#   Managing private Nix packages outside the Nixpkgs tree
+#   http://sandervanderburg.blogspot.dk/2014/07/managing-private-nix-packages-outside.html
+#
 { pkgs ? import <nixpkgs> {} }:
 
 let
+    # Define a callPackage function to be callPackageWith where the auto arguments
+    # are the a combination of the self defined packages and the default nix packages.
+    #
+    # NOTE: self is prioritized over pkgs as it is specified last.
+    #
+    # callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.linuxPackages // pkgs.xlibs // pkgs.gnome // self);
 
-    # Define callPackage such that it will look in custom > pkgs
-    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.linuxPackages // pkgs.xlibs // pkgs.gnome // pkgs.pythonPackages // self);
+    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome // self);
 
-    # callNightly = callPackage ./rust-nightly {};
-
-    # Define custom packages
+    # Custom package definitions
     self = rec {
         airblader    = callPackage ./airblader {};
         font-awesome = callPackage ./font-awesome {};
@@ -26,28 +33,8 @@ let
         gohelpers    = callPackage ./gohelpers {};
         gostatus     = callPackage ./gostatus {};
         premake5     = callPackage ./premake5 {};
-
-        # rustNightly  = callNightly.rustc {
-        #    date = "2015-11-14";
-        #    hash = "0r5b055c6rad4k79j1qrfkyqv706zrab3xijn2wx6rpn5fs9zlw9";
-        #};
-        #cargoNightly = callNightly.cargo {
-        #    date = "2015-11-14";
-        #    hash = "1cz1glfp6d2phz7m6xnpsh22cpcb9r3n8js7i53brzglsasljxla";
-        #};
-
-        # TODO: this was a patch until unstable is updated, remove this as soon as that is the case
-        #bumblebee    = callPackage ./bumblebee {
-        #    nvidia_x11 = pkgs.linuxPackages.nvidia_x11;
-        #    nvidia_x11_i686 = if pkgs.system == "x86_64-linux"
-        #      then pkgs.pkgsi686Linux.linuxPackages.nvidia_x11.override { libsOnly = true; }
-        #      else null;
-        #    primusLib_i686 = if pkgs.system == "x86_64-linux"
-        #      then pkgs.pkgsi686Linux.primusLib
-        #      else null;
-        #};
     };
 
-in {
-    custom = self;
-}
+in
+    self
+

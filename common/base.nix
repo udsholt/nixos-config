@@ -5,9 +5,10 @@
     # Import custom modules
     imports = import ../module/all.nix;
 
-    # Override configuration based on:
-    # * https://github.com/aszlig/vuizvui
-    nixpkgs.config.packageOverrides = import ../override;
+    # Import custom package overrides
+    nixpkgs.config.packageOverrides = pkgs: (import ../package {
+        pkgs = pkgs;
+    });
 
     # TODO: consider moving this somewhere else.
     #
@@ -61,15 +62,9 @@
         atom
         vimNox
         atom
+        emacs
 
         oxygen_gtk
-#        numix-gtk-theme
-#        numix-icon-theme
-#        gtk_engines
-#        hicolor_icon_theme
-#        lxappearance
-#        xfce.thunar
-#        xfce.xfce4icontheme
 
         pcmanfm
     ];
