@@ -6,8 +6,9 @@
 
         ./common/user.nix
         ./common/base.nix
-        ./common/networkmanager.nix
+        ./common/desktop.nix
         ./common/i3.nix
+        ./common/networkmanager.nix
         ./common/steam.nix
         ./common/golang.nix
         ./common/cpp.nix

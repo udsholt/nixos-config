@@ -8,11 +8,11 @@
 
     # nm-applet and themes
     environment.systemPackages = with pkgs; [
-        networkmanagerapplet
+        pkgs.networkmanagerapplet
 
-        gnome3.dconf
-        gnome.gnome_icon_theme
-        gnome3.gnome_themes_standard
+        pkgs.gnome.gnome_icon_theme
+        pkgs.gnome3.dconf
+        pkgs.gnome3.gnome_themes_standard
     ];
 }
 
