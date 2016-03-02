@@ -11,8 +11,6 @@ let
     #
     # NOTE: self is prioritized over pkgs as it is specified last.
     #
-    # callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.linuxPackages // pkgs.xlibs // pkgs.gnome // self);
-
     callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome // self);
 
     # Custom package definitions

@@ -13,7 +13,7 @@
         ./common/plex.nix
         ./common/dnsmasq.nix
         ./common/pco.nix
-        ./common/nodejs.nix
+        #./common/nodejs.nix
         #./common/cpp.nix
 
         ./container/nsq.nix
