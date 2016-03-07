@@ -40,7 +40,18 @@
         pkgs.numix-gtk-theme
         pkgs.numix-icon-theme
 
-        pkgs.xfce.thunar
+        pkgs.xfce.xfconf
+        (
+            pkgs.xfce.thunar.override {
+                thunarPlugins = [
+                    pkgs.xfce.thunar-archive-plugin
+                    pkgs.xfce.thunar_volman
+                ];
+            }
+        )
+
+        pkgs.lxappearance
+
         pkgs.gnome3.file-roller
     ];
 
