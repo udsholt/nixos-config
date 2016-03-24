@@ -1,12 +1,12 @@
 # Desktop configuration.
 #
-# Link /run/current-system/sw/share/themes to ~/,themes
+# Link /run/current-system/sw/share/themes to ~/.themes and use lxappearance to configure.
 #
-# Create ~/.gtkrc-2.0 with:
+# i3 screenshots:
 #
-#   gtk-theme-name = "Numix"
-#   gtk-font-name = "Open Sans 10"
-#   gtk-icon-theme-name = "Numix"
+# bindsym      Print exec "maim ~/image/screenshot/$(date +%Y%m%d_%H%M%S).png"
+# bindsym $mod+Print exec "maim -s ~/image/screenshot/$(date +%Y%m%d_%H%M%S).png"
+#
 #
 { pkgs, config, ... }:
 
@@ -27,9 +27,16 @@
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
         pkgs.sakura
+
         pkgs.chromium
+        pkgs.firefox
         pkgs.spotify
         pkgs.sublime3
+        pkgs.neovim
+        pkgs.neovim-qt
+
+        pkgs.maim
+        pkgs.slop
 
         pkgs.shared_mime_info # contained the missing mime information
 
@@ -39,6 +46,7 @@
 
         pkgs.numix-gtk-theme
         pkgs.numix-icon-theme
+        pkgs.numix-icon-theme-circle
 
         pkgs.xfce.xfconf
         (

@@ -14,16 +14,12 @@
         ./common/cpp.nix
         # ./common/pco.nix
         ./common/dnsmasq.nix
-        ./common/nodejs.nix
+        # ./common/nodejs.nix
 
         ./container/database.nix
     ];
 
     environment.systemPackages = with pkgs; [
         xlibs.xbacklight
-
-        # moonlight
-        # rustNightly
-        # cargoNightly
     ];
 }
