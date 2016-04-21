@@ -20,4 +20,12 @@
         ./container/nsq.nix
         ./container/database.nix
     ];
+
+    environment.systemPackages = with pkgs; [
+        pkgs.filezilla
+        pkgs.ffmpeg
+        pkgs.unrar
+
+        pkgs.nemiver
+    ];
 }

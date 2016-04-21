@@ -35,6 +35,8 @@
         pkgs.neovim
         pkgs.neovim-qt
 
+        pkgs.slack
+
         pkgs.maim
         pkgs.slop
 

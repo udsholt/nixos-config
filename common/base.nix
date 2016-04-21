@@ -1,7 +1,3 @@
-# base configuration
-#
-# TODO: move desktop configuration away from this file
-#
 { pkgs, config, ... }:
 
 {

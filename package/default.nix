@@ -31,6 +31,9 @@ let
         gohelpers    = callPackage ./gohelpers {};
         gostatus     = callPackage ./gostatus {};
         premake5     = callPackage ./premake5 {};
+
+        gtksourceviewmm = callPackage ./gtksourceviewmm {};
+        nemiver         = callPackage ./nemiver {};
     };
 
 in
