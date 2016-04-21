@@ -25,7 +25,6 @@
         pkgs.filezilla
         pkgs.ffmpeg
         pkgs.unrar
-
-        pkgs.nemiver
+        pkgs.kdbg
     ];
 }

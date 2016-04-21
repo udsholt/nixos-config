@@ -11,7 +11,7 @@ let
     #
     # NOTE: self is prioritized over pkgs as it is specified last.
     #
-    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome // self);
+    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome // pkgs.kde4 // self);
 
     # Custom package definitions
     self = rec {
@@ -34,6 +34,10 @@ let
 
         gtksourceviewmm = callPackage ./gtksourceviewmm {};
         nemiver         = callPackage ./nemiver {};
+
+        kdbg = callPackage ./kdbg {
+            inherit (pkgs.kde4) kdelibs;
+        };
     };
 
 in
