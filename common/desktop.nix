@@ -42,6 +42,8 @@
 
         pkgs.shared_mime_info # contained the missing mime information
 
+        pkgs.slack
+
         pkgs.gtk
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine

@@ -21,5 +21,8 @@
 
     environment.systemPackages = with pkgs; [
         xlibs.xbacklight
+
+        pkgs.dropbox
+        pkgs.gqview
     ];
 }
