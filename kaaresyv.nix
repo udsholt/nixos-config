@@ -26,5 +26,6 @@
         pkgs.ffmpeg
         pkgs.unrar
         pkgs.kdbg
+        pkgs.valgrind
     ];
 }
