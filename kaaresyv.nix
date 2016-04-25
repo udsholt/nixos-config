@@ -27,5 +27,6 @@
         pkgs.unrar
         pkgs.kdbg
         pkgs.valgrind
+        pkgs.glsl-debugger
     ];
 }

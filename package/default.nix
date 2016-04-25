@@ -38,6 +38,8 @@ let
         kdbg = callPackage ./kdbg {
             inherit (pkgs.kde4) kdelibs;
         };
+
+        glsl-debugger = callPackage ./glsl-debugger {};
     };
 
 in
