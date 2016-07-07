@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
         url = "https://github.com/premake/premake-core.git";
         rev = "745d65e8a939061bc12f2c42d266d8251a49dbf6";
         fetchSubmodules = true;
-        sha256 = "1yc1pxfnnlfj435pwq59y6s7bryvna0j46fcrnddxc5fbarb4ihp";
+        sha256 = "1zdhqqyvnsj1s7kkrzzhaml3byirg70b6iqf0mwvajj3sankadiy";
     };
 
     buildPhase = ''

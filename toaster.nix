@@ -15,8 +15,7 @@
         # ./common/pco.nix
         ./common/dnsmasq.nix
         # ./common/nodejs.nix
-
-        ./container/database.nix
+        #./container/database.nix
     ];
 
     environment.systemPackages = with pkgs; [
@@ -24,5 +23,6 @@
 
         pkgs.dropbox
         pkgs.gqview
+        #pkgs.kdbg
     ];
 }
