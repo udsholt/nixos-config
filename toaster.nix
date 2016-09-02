@@ -22,7 +22,11 @@
         xlibs.xbacklight
 
         pkgs.dropbox
-        pkgs.gqview
+        #pkgs.gqview
+        #pkgs.glsl-debugger
+        #pkgs.libreoffice
+        #pkgs.gpicview
+        pkgs.xscreensaver
         #pkgs.kdbg
     ];
 }
