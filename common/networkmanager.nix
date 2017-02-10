@@ -10,7 +10,7 @@
     environment.systemPackages = with pkgs; [
         pkgs.networkmanagerapplet
 
-        pkgs.gnome.gnome_icon_theme
+        pkgs.gnome2.gnome_icon_theme
         pkgs.gnome3.dconf
         pkgs.gnome3.gnome_themes_standard
     ];

@@ -11,7 +11,9 @@ let
     #
     # NOTE: self is prioritized over pkgs as it is specified last.
     #
-    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome // pkgs.kde4 // self);
+    # NOTE: gtk/gnome was recently made explicit: https://github.com/NixOS/nixpkgs/pull/18498
+    #
+    callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.gnome2 // pkgs.kde4 // self);
 
     # Custom package definitions
     self = rec {

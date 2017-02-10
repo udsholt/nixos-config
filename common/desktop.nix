@@ -8,6 +8,15 @@
 # bindsym $mod+Print exec "maim -s ~/image/screenshot/$(date +%Y%m%d_%H%M%S).png"
 #
 #
+# Associations:
+#
+#   $ xdg-mime query filetype somefile.tar.gz
+#   application/x-xz
+#   $ xdg-mime default xarchiver.desktop application/x-xz
+#
+#   or add it manually to: ~/.config/mimeapps.list
+#
+#   Dekstop files are stored in: /run/current-system/sw/share/applications/
 { pkgs, config, ... }:
 
 {
@@ -21,16 +30,17 @@
     #
     nixpkgs.config.chromium = {
         enablePepperPDF = true;
-        enableWideVine = true;
+    #    enableWideVine = true;
     };
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
+        pkgs.terminator
         pkgs.sakura
 
         pkgs.chromium
-        pkgs.firefox
-        pkgs.spotify
+        # pkgs.firefox
+        # pkgs.spotify
         pkgs.sublime3
         pkgs.neovim
         pkgs.neovim-qt
@@ -44,7 +54,7 @@
 
         pkgs.slack
 
-        pkgs.gtk
+        #pkgs.gtk2
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine
 
@@ -65,11 +75,22 @@
         pkgs.lxappearance
 
         pkgs.gnome3.file-roller
+        pkgs.xarchiver
     ];
 
     # Setup sakura as terminal
     environment.variables = {
-        TERMINAL = "sakura";
+        #TERMINAL = "sakura";
+        TERMINAL = "terminator";
+    };
+
+    # Redshift screen adjustment as systemd user service
+    services = {
+        redshift = {
+            enable = true;
+            latitude = "55.8";
+            longitude = "12.6";
+        };
     };
 
     # Basic configuration of the xserver

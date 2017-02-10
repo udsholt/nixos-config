@@ -24,6 +24,7 @@
         pkgs.dropbox
         #pkgs.gqview
         #pkgs.glsl-debugger
+        pkgs.apitrace
         #pkgs.libreoffice
         #pkgs.gpicview
         pkgs.xscreensaver

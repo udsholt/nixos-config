@@ -3,14 +3,14 @@
 stdenv.mkDerivation rec {
 
   name = "font-awesome-${version}";
-  version = "4.6.3";
+  version = "4.7.0";
 
   # Fetch the zip file
   # Im not entirely sure what name does here
   src = fetchurl {
     url = "http://fontawesome.io/assets/${name}.zip";
     name = "${name}";
-    sha256 = "06d6p3rydy86hg82igra4vqglyx7bii19jj5kdyhva0d2gqv7zfn";
+    sha256 = "06wygg71zi8wg88dl83l3p5fvkld0nhkh096djbxblpnpzibr6yd";
   };
 
   # Apply only these phases
