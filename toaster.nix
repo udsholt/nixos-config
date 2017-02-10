@@ -29,5 +29,6 @@
         #pkgs.gpicview
         pkgs.xscreensaver
         #pkgs.kdbg
+        pkgs.flatcc
     ];
 }

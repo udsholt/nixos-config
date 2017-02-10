@@ -42,6 +42,8 @@ let
         };
 
         glsl-debugger = callPackage ./glsl-debugger {};
+
+        flatcc = callPackage ./flatcc {};
     };
 
 in
