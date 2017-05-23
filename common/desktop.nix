@@ -35,7 +35,7 @@
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
-        pkgs.terminator
+        #pkgs.terminator
         pkgs.sakura
 
         pkgs.chromium
@@ -80,8 +80,8 @@
 
     # Setup sakura as terminal
     environment.variables = {
-        #TERMINAL = "sakura";
-        TERMINAL = "terminator";
+        TERMINAL = "sakura";
+        #TERMINAL = "terminator";
     };
 
     # Redshift screen adjustment as systemd user service
