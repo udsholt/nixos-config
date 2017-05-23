@@ -6,7 +6,7 @@
   networking.hostId = "829af73f";
 
   # Bootloader
-  boot.loader.gummiboot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use refind for dual booting
@@ -20,7 +20,7 @@
   #   > sudo efibootmgr -c -l \\EFI\\refind\\refind_x64.efi -L rEFInd
   #
   environment.systemPackages = with pkgs; [
-    refind
+    # refind
     efibootmgr
   ];
 
