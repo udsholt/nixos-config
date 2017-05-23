@@ -13,7 +13,7 @@
         ./common/steam.nix
         ./common/plex.nix
         ./common/dnsmasq.nix
-        ./common/pco.nix
+        # ./common/pco.nix
         #./common/nodejs.nix
         #./common/cpp.nix
 
@@ -26,7 +26,7 @@
         pkgs.ffmpeg
         pkgs.unrar
         pkgs.kdbg
-        pkgs.valgrind
-        pkgs.glsl-debugger
+       # pkgs.valgrind
+       # pkgs.apitrace
     ];
 }

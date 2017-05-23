@@ -101,16 +101,21 @@
       #     xinput --set-prop 10 "Device Accel Adaptive Deceleration" 1
       #     xinput --set-prop 10 "Device Accel Velocity Scaling" 1.1
       #
-      inputClassSections = [''
-          Identifier "Razer DeathAdder 2013 Slowdown"
+      # inputClassSections = [''
+      #    Identifier "Razer DeathAdder 2013 Slowdown"
+      #	
+      #    MatchIsPointer "true"
+      #    MatchProduct   "Razer Razer DeathAdder 2013"
+      #	
+      #    Option "Device Accel Constant Deceleration" "2.7"
+      #    Option "Device Accel Adaptive Deceleration" "1.0"
+      #    Option "Device Accel Velocity Scaling"      "1.6"
+      # ''];
 
-          MatchIsPointer "true"
-          MatchProduct   "Razer Razer DeathAdder 2013"
-
-          Option "Device Accel Constant Deceleration" "2.7"
-          Option "Device Accel Adaptive Deceleration" "1.0"
-          Option "Device Accel Velocity Scaling"      "1.6"
-      ''];
+      # Simple multiple monitor configuration, just specify a list of XRandR
+      # outputs which will be mapped from left to right in the order of the
+      # list.
+      # xrandrHeads = ["DVI-D-0" "DVI-I-1"];
   };
 
 

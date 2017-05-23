@@ -40,7 +40,7 @@
 
         pkgs.chromium
         # pkgs.firefox
-        # pkgs.spotify
+        # pkgs.spotify # seems broken right now
         pkgs.sublime3
         pkgs.neovim
         pkgs.neovim-qt

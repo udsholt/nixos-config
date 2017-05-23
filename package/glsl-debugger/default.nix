@@ -29,8 +29,15 @@ stdenv.mkDerivation rec {
     enableParallelBuilding = true;
 
     installPhase = ''
-        install -Dm755 bin/glsldb  $out/bin/glsldb
-        install -Dm755 lib/libglslang.so  $out/lib/libglslang.so
+        mkdir -p $out/bin
+        cp bin/glsldb $out/bin/glsldb
+
+
+        mkdir -p $out/lib
+        cp lib/*.so $out/lib
+
+        mkdir -p $out/lib/plugins
+        cp lib/plugins/*.so $out/lib/plugins
     '';
 }
 
