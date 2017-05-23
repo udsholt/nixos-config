@@ -25,7 +25,7 @@
         pkgs.filezilla
         pkgs.ffmpeg
         pkgs.unrar
-        pkgs.kdbg
+       # pkgs.kdbg
        # pkgs.valgrind
        # pkgs.apitrace
     ];
