@@ -5,26 +5,32 @@
 
 {
   imports = [ ];
-  
+
   system.stateVersion = "17.03";
-  
+
   networking.hostName = "barnacle";
-  
+
   time.timeZone = "Europe/Copenhagen";
-  
+
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
-  
+
   boot.initrd.checkJournalingFS = false;
   boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = { 
+  fileSystems."/" = {
     device = "/dev/disk/by-uuid/8d9e155b-d4fa-4df9-bf1f-622a7da11801";
     #device = "/dev/disk/by-uuid/16765278-53a4-4d34-94d0-e279523b61f6";
     fsType = "ext4";
+  };
+
+  fileSystems."/vboxshare" = {
+    fsType = "vboxsf";
+    device = "shared";
+    options = [ "rw" ];
   };
 
   swapDevices = [ ];

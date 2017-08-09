@@ -8,7 +8,7 @@
         ./common/base.nix
         ./common/desktop.nix
         ./common/i3.nix
-        #./common/golang.nix
+        ./common/golang.nix
         #./common/networkmanager.nix
         #./common/steam.nix
         #./common/plex.nix
@@ -22,6 +22,8 @@
     ];
 
     environment.systemPackages = with pkgs; [
+      pkgs.vscode
+
        # pkgs.filezilla
        # pkgs.ffmpeg
        # pkgs.unrar

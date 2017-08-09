@@ -81,7 +81,6 @@
     # Setup sakura as terminal
     environment.variables = {
         TERMINAL = "sakura";
-        #TERMINAL = "terminator";
     };
 
     # Redshift screen adjustment as systemd user service
@@ -129,6 +128,7 @@
         enableFontDir = true;
         fonts = with pkgs; [
             pkgs.font-awesome
+            pkgs.font-droid
         ];
     };
 }

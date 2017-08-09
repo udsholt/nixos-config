@@ -13,4 +13,9 @@
         gostatus
         forego
     ];
+
+    environment.variables = {
+        GOROOT = [ "${pkgs.go.out}/share/go" ];
+    };
 }
+
