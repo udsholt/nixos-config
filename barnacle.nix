@@ -9,28 +9,13 @@
         ./common/desktop.nix
         ./common/i3.nix
         ./common/golang.nix
-        #./common/networkmanager.nix
-        #./common/steam.nix
-        #./common/plex.nix
-        #./common/dnsmasq.nix
-        #./common/pco.nix
-        #./common/nodejs.nix
-        #./common/cpp.nix
-
-        #./container/nsq.nix
-        #./container/database.nix
     ];
 
     environment.systemPackages = with pkgs; [
       pkgs.vscode
       pkgs.awscli
       pkgs.cqlsh
-
-       # pkgs.filezilla
-       # pkgs.ffmpeg
-       # pkgs.unrar
-       # pkgs.kdbg
-       # pkgs.valgrind
-       # pkgs.apitrace
     ];
+
+    networking.extraHosts = "192.168.56.20 cassandra";
 }
