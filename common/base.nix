@@ -24,12 +24,9 @@
         unzip
         zip
         nox
-        sshuttle
         pciutils
-        python
         pv
         sift
-        ngrok
         vimNox
 
         git

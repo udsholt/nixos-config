@@ -23,6 +23,8 @@
 
     environment.systemPackages = with pkgs; [
       pkgs.vscode
+      pkgs.awscli
+      pkgs.cqlsh
 
        # pkgs.filezilla
        # pkgs.ffmpeg

@@ -35,12 +35,9 @@
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
-        #pkgs.terminator
         pkgs.sakura
 
         pkgs.chromium
-        # pkgs.firefox
-        # pkgs.spotify # seems broken right now
         pkgs.sublime3
         pkgs.neovim
         pkgs.neovim-qt
@@ -54,7 +51,6 @@
 
         pkgs.slack
 
-        #pkgs.gtk2
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine
 

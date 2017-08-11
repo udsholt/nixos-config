@@ -33,6 +33,7 @@ let
         gohelpers    = callPackage ./gohelpers {};
         gostatus     = callPackage ./gostatus {};
         premake5     = callPackage ./premake5 {};
+        cqlsh        = callPackage ./cqlsh {};
 
         gtksourceviewmm = callPackage ./gtksourceviewmm {};
         nemiver         = callPackage ./nemiver {};
