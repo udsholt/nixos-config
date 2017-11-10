@@ -38,4 +38,7 @@
 
     # Enable zsh
     programs.zsh.enable = true;
+
+    # Enable ssh agent
+    programs.ssh.startAgent = true;
 }

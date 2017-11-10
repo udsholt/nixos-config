@@ -4,39 +4,63 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ];
+    imports = [ ];
 
-  system.stateVersion = "17.03";
+    system.stateVersion = "17.09";
 
-  networking.hostName = "barnacle";
+    networking.hostName = "barnacle";
 
-  time.timeZone = "Europe/Copenhagen";
+    time.timeZone = "Europe/Copenhagen";
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda";
+    boot.loader.grub.enable = true;
+    boot.loader.grub.version = 2;
+    boot.loader.grub.device = "/dev/sda";
 
-  boot.initrd.checkJournalingFS = false;
-  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
-  boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+    boot.initrd.checkJournalingFS = false;
+    boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
+    boot.kernelModules = [ ];
+    boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/8d9e155b-d4fa-4df9-bf1f-622a7da11801";
-    #device = "/dev/disk/by-uuid/16765278-53a4-4d34-94d0-e279523b61f6";
-    fsType = "ext4";
-  };
+    fileSystems."/" = {
+        device = "/dev/disk/by-uuid/8d9e155b-d4fa-4df9-bf1f-622a7da11801";
+        #device = "/dev/disk/by-uuid/16765278-53a4-4d34-94d0-e279523b61f6";
+        fsType = "ext4";
+    };
 
-  fileSystems."/vboxshare" = {
-    fsType = "vboxsf";
-    device = "shared";
-    options = [ "rw" ];
-  };
+    fileSystems."/vboxshare" = {
+        fsType = "vboxsf";
+        device = "shared";
+        options = [ "rw" ];
+    };
 
-  swapDevices = [ ];
+    swapDevices = [ ];
 
-  nix.maxJobs = lib.mkDefault 1;
-  virtualisation.virtualbox.guest.enable = true;
+    nix.maxJobs = lib.mkDefault 1;
+    virtualisation.virtualbox.guest.enable = true;
+
+    # Host only network with static ipAddress allowed through firewall
+    networking.interfaces.enp0s8 = { ipAddress = "192.168.56.30"; prefixLength = 24; };
+    networking.firewall = {
+        enable = true;
+        trustedInterfaces = ["enp0s8"];
+    };
+
+    /*
+    # Host only network with static ipAddress and port fowarding
+    networking.interfaces.enp0s8 = { ipAddress = "192.168.56.30"; prefixLength = 24; };
+    networking.nat = {
+        enable = true;
+        externalInterface = "enp0s8";
+        forwardPorts = [
+            { destination = "127.0.0.1:4000"; proto = "tcp"; sourcePort = 4000; }
+            { destination = "127.0.0.1:5000"; proto = "tcp"; sourcePort = 5000; }
+            { destination = "127.0.0.1:6000"; proto = "tcp"; sourcePort = 6000; }
+            { destination = "127.0.0.1:7000"; proto = "tcp"; sourcePort = 7000; }
+            { destination = "127.0.0.1:8000"; proto = "tcp"; sourcePort = 8000; }
+            { destination = "127.0.0.1:9000"; proto = "tcp"; sourcePort = 9000; }
+        ];
+    };
+    */
 }
 
 

@@ -7,7 +7,7 @@
             home = "/home/udsholt";
             shell = "/run/current-system/sw/bin/zsh";
             isNormalUser = true;
-            extraGroups = [ "wheel" "networkmanager" ];
+            extraGroups = [ "wheel" "networkmanager" "docker" ];
         };
     };
 }

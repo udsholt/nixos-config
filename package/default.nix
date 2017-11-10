@@ -34,6 +34,7 @@ let
         gostatus     = callPackage ./gostatus {};
         premake5     = callPackage ./premake5 {};
         cqlsh        = callPackage ./cqlsh {};
+        # vscode       = callPackage ./vscode {}; // not working
 
         gtksourceviewmm = callPackage ./gtksourceviewmm {};
         nemiver         = callPackage ./nemiver {};
