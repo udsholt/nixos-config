@@ -8,6 +8,12 @@
         dmenu
         dunst
         libnotify
+
+        # https://github.com/unix121/i3wm-themer/blob/master/themes/Fire/.config/polybar/config
+        # https://github.com/DaveDavenport/rofi/
+        # https://github.com/jaagr/polybar
+        rofi    # start with > rofi -show run
+        polybar # looks nice...
     ];
 
     /*

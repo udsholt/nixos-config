@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url = "http://fontawesome.io/assets/${name}.zip";
     name = "${name}";
-    sha256 = "1pn4hc8p1w0qj9cvqh2c1swhi3gn27jvqaw8hgx94wmadmxhkb8d";
+    sha256 = "00jqiszvb8i95bpj7iwi9pgqabs1xfpm618nj1md7rklx2wyvdm7";
   };
 
   # Apply only these phases
