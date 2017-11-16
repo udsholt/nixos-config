@@ -1,5 +1,4 @@
 [
-    ./airblader
     ./dunst
     ./nsq
     ./disque

@@ -3,8 +3,6 @@ self: super:
 {
     font-awesome = super.callPackage ./package/font-awesome {};
 
-    airblader = super.callPackage ./package/airblader {};
-
     cqlsh = super.callPackage ./package/cqlsh {};
 
     sakura = super.callPackage ./package/sakura {

@@ -10,10 +10,18 @@
         libnotify
     ];
 
+    /*
     services.xserver = {
         enable = true;
 
         windowManager.airblader.enable = true;
         windowManager.default = "airblader";
+    };
+    */
+    services.xserver = {
+        enable = true;
+        windowManager.i3.package = pkgs.i3-gaps;
+        windowManager.i3.enable = true;
+        windowManager.default = "i3";
     };
 }
