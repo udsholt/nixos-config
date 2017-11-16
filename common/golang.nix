@@ -3,15 +3,15 @@
 {
     environment.systemPackages = with pkgs; [
         go
-        godep
-        gocode
-        golint
-        gotags
-        goimports
-        gorerun
-        gohelpers
-        gostatus
-        forego
+        #godep
+        #gocode
+        #golint
+        #gotags
+        #goimports
+        #gorerun
+        #gohelpers
+        #gostatus
+        #forego
     ];
 
     environment.variables = {

@@ -5,9 +5,14 @@
     imports = import ../module/all.nix;
 
     # Import custom package overrides
-    nixpkgs.config.packageOverrides = pkgs: (import ../package {
-        pkgs = pkgs;
-    });
+    #nixpkgs.config.packageOverrides = pkgs: (import ../package {
+    #    pkgs = pkgs;
+    #});
+
+    # Import custom overlays
+    nixpkgs.overlays = [
+        (import ../overlay/custom)
+    ];
 
     # Required for sublime, so just include it everywhere
     # * http://fluffynukeit.com/category/nixos/

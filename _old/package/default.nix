@@ -18,7 +18,7 @@ let
     # Custom package definitions
     self = rec {
         airblader    = callPackage ./airblader {};
-        font-awesome = callPackage ./font-awesome {};
+        #font-awesome = callPackage ./font-awesome {};
         sakura       = callPackage ./sakura {};
         rtl8723au    = callPackage ./rtl8723au {};
         disque       = callPackage ./disque {};

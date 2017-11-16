@@ -22,6 +22,7 @@
       pkgs.terraform
       pkgs.graphviz
       pkgs.docker_compose
+      pkgs.siege
     ];
 
     networking.extraHosts = "192.168.56.20 cassandra";
