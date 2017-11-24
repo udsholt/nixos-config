@@ -16,7 +16,7 @@
         pkgs.gnumake
         pkgs.awscli
         pkgs.cqlsh
-        pkgs.terraform
+        #pkgs.terraform
     ];
 
     #networking.extraHosts = "192.168.56.20 cassandra";

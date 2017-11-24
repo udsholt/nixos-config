@@ -29,6 +29,7 @@
         gorerun      # custom
         goforego     # custom
         dep          # nixpkgs
+        govendor     # custom
     ];
 
     environment.variables = {
