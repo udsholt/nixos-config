@@ -19,7 +19,7 @@
       pkgs.gnumake
       pkgs.gcc
       pkgs.protobuf3_2
-      pkgs.terraform
+      pkgs.terraform_0_10-full
       pkgs.graphviz
       pkgs.docker_compose
       pkgs.siege
