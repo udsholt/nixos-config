@@ -11,6 +11,7 @@
         ./common/golang.nix
 
         ./container/redis.nix
+        ./container/stats.nix
     ];
 
     environment.systemPackages = with pkgs; [
