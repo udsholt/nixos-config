@@ -21,5 +21,6 @@ self: super:
     gorerun      = super.callPackage ./package/gorerun {};
     goforego     = super.callPackage ./package/goforego {};
     govendor     = super.callPackage ./package/govendor {};
+    gotorch      = super.callPackage ./package/gotorch {};
 }
 

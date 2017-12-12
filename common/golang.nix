@@ -30,6 +30,7 @@
         goforego     # custom
         dep          # nixpkgs
         govendor     # custom
+        gotorch      # custom
     ];
 
     environment.variables = {
