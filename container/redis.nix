@@ -6,9 +6,12 @@
             services.redis = {
                 enable = true;
                 dbpath = "/var/lib/redis";
-                appendOnly = true;
                 port = 6379;
                 user = "redis";
+
+                # https://stackoverflow.com/questions/27681402/how-to-disable-redis-rdb
+                appendOnly = true;
+                save = [];
             };
         };
     };

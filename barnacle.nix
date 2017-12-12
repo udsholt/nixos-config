@@ -12,8 +12,8 @@
         ./common/nodejs.nix
 
         ./container/redis.nix
+        ./container/stats.nix
     ];
-
     environment.systemPackages = with pkgs; [
       pkgs.vscode
       pkgs.awscli
@@ -27,6 +27,7 @@
       pkgs.siege
       pkgs.dnsutils               # nslookup, dig, etc.
       pkgs.redis                  # redis-cli
+      pkgs.influxdb               # influx (client)
       pkgs.redis-desktop-manager  # redis-desktop-manager
     ];
 

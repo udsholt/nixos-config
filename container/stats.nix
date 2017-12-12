@@ -10,8 +10,8 @@
 
             services.grafana = {
                 enable = true;
+                addr = "";
             };
-            
         };
     };
 }
