@@ -24,6 +24,7 @@
         pkgs.gparted
         pkgs.dnsutils               # nslookup, dig, etc.
         pkgs.redis                  # redis-cli
+        pkgs.influxdb               # influx (client)
         pkgs.redis-desktop-manager  # redis-desktop-manager
     ];
 
