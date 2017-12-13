@@ -3,19 +3,20 @@
 
 buildGoPackage rec {
   name = "forego-unstable-${version}";
-  version = "2015-03-27";
-  rev = "09d2395bae50fd15e382a7983aea75014f99b7e0";
+  version = "2017-03-27";
+  rev = "9cd74005149b389d894e6b49c72972785577ad49";
 
   goPackagePath = "github.com/ddollar/forego";
 
   src = fetchgit {
     inherit rev;
-    url = "https://github.com/udsholt/forego.git";
-    sha256 = "1c8qi0fwdf9q14cdwhlhy71js9c6ndx0ns6cffqhj0pl9mh1vdv3";
+    url = "https://github.com/ddollar/forego.git";
+    sha256 = "0fanzlxd1q9d3kba07pspfr1ccm8lfk9mlyishnpq2dyfpcinwax";
   };
+
+  #goDeps = ./deps.nix;
 
   # TODO: add metadata https://nixos.org/nixpkgs/manual/#sec-standard-meta-attributes
   meta = {
   };
 }
-
