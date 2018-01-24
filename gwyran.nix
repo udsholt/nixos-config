@@ -17,6 +17,8 @@
     environment.systemPackages = with pkgs; [
         pkgs.vscode
         pkgs.gnumake
+        pkgs.gcc
+        
         pkgs.awscli
         pkgs.cqlsh
         #pkgs.terraform
