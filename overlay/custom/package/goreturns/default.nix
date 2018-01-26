@@ -3,15 +3,15 @@
 
 buildGoPackage rec {
   name = "goreturns-unstable-${version}";
-  version = "2017-10-24";
-  rev = "3bdb584fbb61d152552a42d1ad382512f71cf472";
+  version = "2017-12-29";
+  rev = "e5bd430ebbfbdd93b81837ff965ce4464d26c8d9";
 
   goPackagePath = "github.com/sqs/goreturns";
 
   src = fetchgit {
     inherit rev;
     url = "https://github.com/sqs/goreturns.git";
-    sha256 = "1ij3xda0qmginjq6lz99qmhivqd1dxpviiv9l1qabyllb5b7xrvz";
+    sha256 = "0z8x744v6x08jjfd34y5c6d0p2v5wa2k6vbm6wjd1sifrjvvn669";
   };
 
   goDeps = ./deps.nix;
