@@ -9,26 +9,35 @@
         ./common/desktop.nix
         ./common/i3.nix
         ./common/networkmanager.nix
-        ./common/steam.nix
+        #./common/steam.nix
         ./common/golang.nix
-        ./common/cpp.nix
+        #./common/cpp.nix
         # ./common/pco.nix
         ./common/dnsmasq.nix
         # ./common/nodejs.nix
         #./container/database.nix
+
+
+        ./container/redis.nix
     ];
 
     environment.systemPackages = with pkgs; [
         xlibs.xbacklight
 
-        pkgs.dropbox
+        pkgs.vscode
+        pkgs.gnumake
+        pkgs.awscli
+        pkgs.cqlsh
+        pkgs.redis # for cli
+
+        #pkgs.dropbox
         #pkgs.gqview
         #pkgs.glsl-debugger
-        pkgs.apitrace
+        #pkgs.apitrace
         #pkgs.libreoffice
         #pkgs.gpicview
         pkgs.xscreensaver
         #pkgs.kdbg
-        pkgs.flatcc
+        #pkgs.flatcc
     ];
 }
