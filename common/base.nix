@@ -19,12 +19,13 @@
     # * https://github.com/NixOS/nixpkgs/issues/4766
     nixpkgs.config.allowUnfree = true;
 
-    # Add some basic stuff
+    # Add handy utilities 
     environment.systemPackages = with pkgs; [
         lsof
         tree
         psmisc
         wget
+        pwgen
         which
         unzip
         zip
@@ -33,12 +34,11 @@
         pv
         sift
         vimNox
-
+        
         git
         gettext # https://github.com/NixOS/nixpkgs/issues/13150
         tig
         mercurial
-        # subversionClient
     ];
 
     # Enable zsh
