@@ -22,6 +22,7 @@ self: super:
     goforego     = super.callPackage ./package/goforego {};
     govendor     = super.callPackage ./package/govendor {};
     gotorch      = super.callPackage ./package/gotorch {};
+    gomplate     = super.callPackage ./package/gomplate {};
 
     # temporary override for dep, the current version is ancient
     dep = super.callPackage ./package/godep {};

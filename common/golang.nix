@@ -31,6 +31,7 @@
         dep          # nixpkgs
         govendor     # custom
         gotorch      # custom
+        gomplate     # custom
     ];
 
     environment.variables = {
