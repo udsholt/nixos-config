@@ -26,5 +26,8 @@ self: super:
 
     # temporary override for dep, the current version is ancient
     dep = super.callPackage ./package/godep {};
+
+
+    vscode = super.callPackage ./package/vscode {};
 }
 
