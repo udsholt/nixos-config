@@ -32,7 +32,7 @@
         nox
         pciutils
         pv
-        sift
+        #sift
         vimNox
         jq
         sshuttle
