@@ -44,6 +44,7 @@
 
         pkgs.slack
 
+        pkgs.feh
         pkgs.maim
         pkgs.slop
 

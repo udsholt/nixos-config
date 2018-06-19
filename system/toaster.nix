@@ -2,7 +2,7 @@
 
 {
     # Locked state?
-    system.stateVersion = "17.09";
+    system.stateVersion = "18.03";
 
     # Hostname definition
     networking.hostName = "toaster";
