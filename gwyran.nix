@@ -9,7 +9,8 @@
         ./common/desktop.nix
         ./common/i3.nix
         ./common/golang.nix
-
+        ./common/nodejs.nix
+        
         ./container/redis.nix
         ./container/stats.nix
     ];
@@ -21,7 +22,6 @@
         
         pkgs.awscli
         pkgs.cqlsh
-        #pkgs.terraform
 
         pkgs.gparted
         pkgs.dnsutils               # nslookup, dig, etc.
