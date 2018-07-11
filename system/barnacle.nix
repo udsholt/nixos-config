@@ -6,7 +6,7 @@
 {
     imports = [ ];
 
-    system.stateVersion = "17.09";
+    system.stateVersion = "18.03";
 
     networking.hostName = "barnacle";
 
@@ -38,7 +38,7 @@
     virtualisation.virtualbox.guest.enable = true;
 
     # Host only network with static ipAddress allowed through firewall
-    networking.interfaces.enp0s8 = { ipAddress = "192.168.56.30"; prefixLength = 24; };
+    networking.interfaces.enp0s8.ipv4.addresses = [{ address = "192.168.56.30"; prefixLength = 24; }];
     networking.firewall = {
         enable = true;
         trustedInterfaces = ["enp0s8"];
