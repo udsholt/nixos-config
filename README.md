@@ -26,3 +26,8 @@ function nix-goto {
 
 ```
 
+
+Channel location:
+
+/nix/var/nix/profiles/per-user/root/channels/nixos/pkgs
+

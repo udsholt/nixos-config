@@ -26,6 +26,7 @@
       pkgs.redis                  # redis-cli
       pkgs.influxdb               # influx (client)
       pkgs.redis-desktop-manager  # redis-desktop-manager
+      pkgs.google-cloud-sdk-gce   # google cloud sdk with container engine
     ];
 
     networking.extraHosts = "192.168.56.20 cassandra";
