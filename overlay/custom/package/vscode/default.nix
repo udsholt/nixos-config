@@ -1,8 +1,8 @@
-{ stdenv, lib, callPackage, fetchurl, unzip, atomEnv, makeDesktopItem,
-  makeWrapper, libXScrnSaver, libxkbfile, libsecret }:
+{ stdenv, lib, fetchurl, unzip, atomEnv, makeDesktopItem,
+  gtk2, makeWrapper, libXScrnSaver, libxkbfile, libsecret }:
 
 let
-  version = "1.23.1";
+  version = "1.25.1";
   channel = "stable";
 
   plat = {
@@ -12,15 +12,16 @@ let
   }.${stdenv.system};
 
   sha256 = {
-    "i686-linux" = "0vqaxyg6r6mfm1gz8j7wxgg426hjsmv2ybyi8rfjcm9s8d23y9n6";
-    "x86_64-linux" = "0zycl8zqf5yiqq6k6mr28a20yg37whb8iw527pavvm74knzx3lgk";
-    "x86_64-darwin" = "03r2cvim7swq1fjxh6m9f7rifww3hddnyzpzniqb5132nnq4mrmc";
+    "i686-linux" = "1qljnajk4h9ki5gvydh1b557fvhvcryvkrvypvz0pr804lpdqsmg";
+    "x86_64-linux" = "0f1lpwyxfchmbymzzxv97w9cy1z5pdljhwm49mc5v84aygmvnmjq";
+    "x86_64-darwin" = "1dgda1drij1c114xzv4hs44k7rx4x1vzghlxgii0h2rg641n6pbn";
   }.${stdenv.system};
 
   archive_fmt = if stdenv.system == "x86_64-darwin" then "zip" else "tar.gz";
 
   rpath = lib.concatStringsSep ":" [
     atomEnv.libPath
+    "${lib.makeLibraryPath [gtk2]}"
     "${lib.makeLibraryPath [libsecret]}/libsecret-1.so.0"
     "${lib.makeLibraryPath [libXScrnSaver]}/libXss.so.1"
     "${lib.makeLibraryPath [libxkbfile]}/libxkbfile.so.1"
@@ -80,6 +81,11 @@ in
       patchelf \
         --set-rpath "${rpath}" \
         $out/lib/vscode/resources/app/node_modules.asar.unpacked/keytar/build/Release/keytar.node
+
+      patchelf \
+        --set-rpath "${rpath}" \
+        "$out/lib/vscode/resources/app/node_modules.asar.unpacked/native-keymap/build/Release/\
+      keymapping.node"
 
       ln -s ${lib.makeLibraryPath [libsecret]}/libsecret-1.so.0 $out/lib/vscode/libsecret-1.so.0
     '';
