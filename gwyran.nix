@@ -10,6 +10,7 @@
         ./common/i3.nix
         ./common/golang.nix
         ./common/nodejs.nix
+        ./common/sybo.nix
         
         ./container/redis.nix
         ./container/stats.nix
@@ -30,8 +31,6 @@
         pkgs.influxdb               # influx (client)
         pkgs.redis-desktop-manager  # redis-desktop-manager
     ];
-
-    #networking.extraHosts = "192.168.56.20 cassandra";
 
     virtualisation.docker.enable = true;
 }
