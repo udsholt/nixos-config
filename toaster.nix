@@ -34,7 +34,7 @@
         #pkgs.gqview
         #pkgs.glsl-debugger
         #pkgs.apitrace
-        #pkgs.libreoffice
+        pkgs.libreoffice
         #pkgs.gpicview
         pkgs.xscreensaver
         #pkgs.kdbg
