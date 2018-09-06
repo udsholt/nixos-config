@@ -15,13 +15,10 @@
         ./container/stats.nix
     ];
     environment.systemPackages = with pkgs; [
-      pkgs.vscode
       pkgs.awscli
       pkgs.cqlsh
       pkgs.gnumake
       pkgs.gcc
-      pkgs.protobuf3_2
-      pkgs.terraform_0_10-full
       pkgs.graphviz
       pkgs.docker_compose
       pkgs.siege

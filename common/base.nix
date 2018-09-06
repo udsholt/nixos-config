@@ -32,11 +32,11 @@
         nox
         pciutils
         pv
-        #sift
-        vimNox
         jq
+
+        vimNox
         sshuttle
-        
+
         git
         gettext # https://github.com/NixOS/nixpkgs/issues/13150
         tig

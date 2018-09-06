@@ -35,10 +35,12 @@
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
+        pkgs.chromium
+
         pkgs.sakura
 
-        pkgs.chromium
         pkgs.sublime3
+        pkgs.vscode
         pkgs.neovim
         pkgs.neovim-qt
 
@@ -50,11 +52,8 @@
 
         pkgs.shared_mime_info # contained the missing mime information
 
-        pkgs.slack
-
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine
-
         pkgs.numix-gtk-theme
         pkgs.numix-icon-theme
         pkgs.numix-icon-theme-circle
