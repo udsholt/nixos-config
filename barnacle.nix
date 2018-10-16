@@ -32,4 +32,12 @@
     networking.extraHosts = "192.168.56.20 cassandra";
 
     virtualisation.docker.enable = true;
+
+    services.privoxy = {
+        enable = true;
+        listenAddress = "192.168.56.30:12345";
+        extraConfig = ''
+            debug 2
+        '';
+    };
 }

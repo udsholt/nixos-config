@@ -34,7 +34,7 @@
         pv
         jq
 
-        vimNox
+        neovim
         sshuttle
 
         git
