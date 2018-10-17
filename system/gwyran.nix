@@ -6,7 +6,7 @@
 {
     imports = [ ];
 
-    system.stateVersion = "18.03";
+    system.stateVersion = "18.09";
 
     networking.hostName = "gwyran";
 
