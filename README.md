@@ -26,8 +26,19 @@ function nix-goto {
 
 ```
 
-
 Channel location:
 
 /nix/var/nix/profiles/per-user/root/channels/nixos/pkgs
+
+## Google Cloud SDK
+
+Installing Google Cloud SDK should not be done through the nixos package as it is 
+intended to be used for on GCE hosts.
+
+But the python based tooling works fine with `pkgs.python`, and component installations
+works fine.The java based tooling have not been tested yet.
+
+Install as described in https://cloud.google.com/sdk/docs/quickstart-linux (or
+https://cloud.google.com/sdk/docs/downloads-interactive).
+
 
