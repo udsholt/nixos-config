@@ -40,7 +40,6 @@
         pkgs.sakura
 
         pkgs.sublime3
-        pkgs.vscode
         pkgs.neovim
         pkgs.neovim-qt
 

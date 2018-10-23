@@ -4,11 +4,6 @@
     # Import custom modules
     imports = import ../module/all.nix;
 
-    # Import custom package overrides
-    #nixpkgs.config.packageOverrides = pkgs: (import ../package {
-    #    pkgs = pkgs;
-    #});
-
     # Import custom overlays
     nixpkgs.overlays = [
         (import ../overlay/custom)

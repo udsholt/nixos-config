@@ -31,5 +31,11 @@ self: super:
     dep = super.callPackage ./package/godep {};
 
     vscode = super.callPackage ./package/vscode {};
+
+    # https://github.com/NixOS/nixpkgs/issues/35088
+    # https://blog.flyingcircus.io/2017/11/07/nixos-the-dos-and-donts-of-nixpkgs-overlays/
+    vscode-with-cpp = super.vscode-with-extensions.override {
+        vscodeExtensions = with self.vscode-extensions; [ ms-vscode.cpptools ];
+    };
 }
 
