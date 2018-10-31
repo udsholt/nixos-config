@@ -40,6 +40,7 @@
         pkgs.sakura
 
         pkgs.sublime3
+        pkgs.vscode
         pkgs.neovim
         pkgs.neovim-qt
 
@@ -124,6 +125,7 @@
         fonts = with pkgs; [
             pkgs.font-awesome
             pkgs.font-droid
+            pkgs.powerline-fonts
         ];
     };
 }
