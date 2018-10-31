@@ -3,5 +3,4 @@
     ./nsq
     ./disque
     ./beanstalkd
-    ./pcophp
 ]
