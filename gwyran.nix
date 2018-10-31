@@ -9,7 +9,7 @@
         ./common/desktop.nix
         ./common/i3.nix
         ./common/golang.nix
-        ./common/nodejs.nix
+        ./common/node.nix
         ./common/sybo.nix
         
         ./container/redis.nix
