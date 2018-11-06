@@ -28,6 +28,7 @@
         pciutils
         pv
         jq
+        yadm
 
         python
 
