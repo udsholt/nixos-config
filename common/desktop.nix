@@ -86,6 +86,11 @@
             latitude = "55.8";
             longitude = "12.6";
         };
+        
+        compton = {
+            enable = true;
+            shadow = true;
+        };
     };
 
     # Basic configuration of the xserver

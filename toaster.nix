@@ -10,6 +10,7 @@
         ./common/i3.nix
         ./common/networkmanager.nix
         ./common/golang.nix
+        ./common/node.nix
 
         ./container/redis.nix
     ];
