@@ -24,7 +24,7 @@
         pkgs.cqlsh
         pkgs.redis # for cli
 
-        pkgs.vscode-with-cpp
+        pkgs.sql-workbench
 
         pkgs.python
         pkgs.gcc

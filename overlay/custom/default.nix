@@ -37,5 +37,7 @@ self: super:
     vscode-with-cpp = super.vscode-with-extensions.override {
         vscodeExtensions = with self.vscode-extensions; [ ms-vscode.cpptools ];
     };
+
+    sql-workbench = super.callPackage ./package/sql-workbench {};
 }
 
