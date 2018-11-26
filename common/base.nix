@@ -30,6 +30,9 @@
         jq
         yadm
 
+        dnsutils # nslookup, dig, etc.
+        whois
+
         python
 
         neovim
