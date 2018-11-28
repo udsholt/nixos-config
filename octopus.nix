@@ -9,5 +9,6 @@
         ./common/desktop.nix
         ./common/i3.nix
         ./common/node.nix
+        ./common/golang.nix
     ];
 }
