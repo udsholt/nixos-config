@@ -3,6 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
         steam
+        steam-run
     ];
 
     hardware.opengl.driSupport32Bit = true;
