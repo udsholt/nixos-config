@@ -55,9 +55,12 @@
 
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine
+        
         pkgs.numix-gtk-theme
         pkgs.numix-icon-theme
         pkgs.numix-icon-theme-circle
+
+        pkgs.hicolor-icon-theme
 
         pkgs.xfce.xfconf
         (
