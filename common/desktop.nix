@@ -38,6 +38,7 @@
         pkgs.chromium
 
         pkgs.sakura
+        pkgs.xeventbind
 
         pkgs.sublime3
         pkgs.vscode
@@ -86,7 +87,7 @@
             latitude = "55.8";
             longitude = "12.6";
         };
-        
+
         compton = {
             enable = true;
             shadow = true;

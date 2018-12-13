@@ -32,6 +32,10 @@ self: super:
 
     vscode = super.callPackage ./package/vscode {};
 
+    xeventbind = super.callPackage ./package/xeventbind {
+        libX11 = super.xorg.libX11;
+    };
+
     # https://github.com/NixOS/nixpkgs/issues/35088
     # https://blog.flyingcircus.io/2017/11/07/nixos-the-dos-and-donts-of-nixpkgs-overlays/
     vscode-with-cpp = super.vscode-with-extensions.override {
