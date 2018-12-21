@@ -27,6 +27,8 @@ self: super:
     gotorch      = super.callPackage ./package/gotorch {};
     gomplate     = super.callPackage ./package/gomplate {};
 
+    mage = super.callPackage ./package/mage {};
+
     # temporary override for dep, the current version is ancient
     dep = super.callPackage ./package/godep {};
 
