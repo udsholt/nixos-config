@@ -11,7 +11,6 @@
         ./common/networkmanager.nix
         ./common/golang.nix
         ./common/node.nix
-        #./common/steam.nix
 
         ./container/redis.nix
     ];
