@@ -45,5 +45,9 @@ self: super:
     };
 
     sql-workbench = super.callPackage ./package/sql-workbench {};
+
+    dumb = super.callPackage ./package/lutris/dumb {};
+    sndio = super.callPackage ./package/lutris/sndio {};
+    lutris = super.callPackage ./package/lutris/lutris {};
 }
 
