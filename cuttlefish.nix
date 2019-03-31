@@ -12,4 +12,7 @@
         ./common/node.nix
         ./common/golang.nix
     ];
+
+    virtualisation.docker.enable = true;
+
 }
