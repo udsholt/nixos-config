@@ -29,7 +29,7 @@
     # sudo nix-store --add-fixed sha256 ./google-chrome-stable_45.0.2454.85-1_amd64.deb
     #
     nixpkgs.config.chromium = {
-        enablePepperPDF = true;
+    #    enablePepperPDF = true; # figure this out for nixos 19.03
     #    enableWideVine = true;
     };
 
@@ -130,7 +130,7 @@
         enableFontDir = true;
         fonts = with pkgs; [
             pkgs.font-awesome
-            pkgs.font-droid
+            # pkgs.font-droid # figure this out again for nixos 19.03
             pkgs.powerline-fonts
         ];
     };

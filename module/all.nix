@@ -2,5 +2,5 @@
     ./dunst
     ./nsq
     ./disque
-    ./beanstalkd
+    #./beanstalkd
 ]
