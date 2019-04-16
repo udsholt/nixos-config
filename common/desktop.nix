@@ -28,15 +28,15 @@
     #
     # sudo nix-store --add-fixed sha256 ./google-chrome-stable_45.0.2454.85-1_amd64.deb
     #
-    nixpkgs.config.chromium = {
+    #nixpkgs.config.chromium = {
     #    enablePepperPDF = true; # figure this out for nixos 19.03
     #    enableWideVine = true;
-    };
+    #};
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
         pkgs.firefox
-        pkgs.chromium
+        #pkgs.chromium
 
         pkgs.sakura
         pkgs.xeventbind

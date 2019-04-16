@@ -38,16 +38,8 @@ self: super:
         libX11 = super.xorg.libX11;
     };
 
-    # https://github.com/NixOS/nixpkgs/issues/35088
-    # https://blog.flyingcircus.io/2017/11/07/nixos-the-dos-and-donts-of-nixpkgs-overlays/
-    vscode-with-cpp = super.vscode-with-extensions.override {
-        vscodeExtensions = with self.vscode-extensions; [ ms-vscode.cpptools ];
-    };
-
     sql-workbench = super.callPackage ./package/sql-workbench {};
 
-    dumb = super.callPackage ./package/lutris/dumb {};
-    sndio = super.callPackage ./package/lutris/sndio {};
-    lutris = super.callPackage ./package/lutris/lutris {};
+    go = super.go_1_12;
 }
 
