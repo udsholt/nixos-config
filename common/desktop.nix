@@ -35,6 +35,7 @@
 
     # Add some desktop packages
     environment.systemPackages = with pkgs; [
+        pkgs.firefox
         pkgs.chromium
 
         pkgs.sakura
