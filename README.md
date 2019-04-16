@@ -42,3 +42,9 @@ Install as described in https://cloud.google.com/sdk/docs/quickstart-linux (or
 https://cloud.google.com/sdk/docs/downloads-interactive).
 
 
+## Problems
+
+Git (over ssh) no longer working after upgrade to 19.03.
+Add IPQoS=throughput to `ssh/config` for all hosts.
+https://github.com/NixOS/nixpkgs/issues/50389
+
