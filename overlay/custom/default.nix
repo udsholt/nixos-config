@@ -39,7 +39,5 @@ self: super:
     };
 
     sql-workbench = super.callPackage ./package/sql-workbench {};
-
-    go = super.go_1_12;
 }
 
