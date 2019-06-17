@@ -26,6 +26,7 @@
         zip
         nox
         pciutils
+        sshuttle
         pv
         jq
         yadm
@@ -37,7 +38,6 @@
 
         neovim
         gnumake
-        mage
 
         git
         gettext # https://github.com/NixOS/nixpkgs/issues/13150
