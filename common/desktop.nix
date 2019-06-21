@@ -43,8 +43,8 @@
 
         pkgs.sublime3
         pkgs.vscode
-        pkgs.neovim
-        pkgs.neovim-qt
+        #pkgs.neovim
+        #pkgs.neovim-qt
 
         pkgs.slack
 
