@@ -16,6 +16,10 @@
         polybar # looks nice...
     ];
 
+    nixpkgs.config.packageOverrides = pkgs: {
+        polybar = pkgs.polybar.override { i3GapsSupport = true; };
+    };
+
     /*
     services.xserver = {
         enable = true;

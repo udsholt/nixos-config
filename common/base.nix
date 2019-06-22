@@ -25,6 +25,7 @@
         unzip
         zip
         nox
+        binutils
         pciutils
         sshuttle
         pv

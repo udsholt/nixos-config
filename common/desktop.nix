@@ -94,7 +94,7 @@
 
         compton = {
             enable = true;
-            shadow = true;
+        #    shadow = true;
         };
     };
 
