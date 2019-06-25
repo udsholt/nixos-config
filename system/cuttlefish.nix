@@ -27,6 +27,13 @@
     ];
 
     nix.maxJobs = lib.mkDefault 4;
+
+    # Host only network with static ipAddress allowed through firewall
+    networking.interfaces.ens37.ipv4.addresses = [{ address = "192.168.253.100"; prefixLength = 24; }];
+    networking.firewall = {
+        enable = true;
+        trustedInterfaces = ["ens37"];
+    };
 }
 
 
