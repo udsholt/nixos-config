@@ -26,6 +26,7 @@ self: super:
     govendor     = super.callPackage ./package/govendor {};
     gotorch      = super.callPackage ./package/gotorch {};
     gomplate     = super.callPackage ./package/gomplate {};
+    postman      = super.callPackage ./package/postman {};
 
     mage = super.callPackage ./package/mage {};
 

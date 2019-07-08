@@ -48,6 +48,8 @@
 
         pkgs.slack
 
+        pkgs.postman
+
         pkgs.feh
         pkgs.maim
         pkgs.slop
@@ -56,7 +58,7 @@
 
         pkgs.gtk_engines
         pkgs.gtk-engine-murrine
-        
+
         pkgs.numix-gtk-theme
         pkgs.numix-icon-theme
         pkgs.numix-icon-theme-circle
