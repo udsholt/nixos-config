@@ -13,7 +13,11 @@
     ];
 
     # docker and docker-compose
-    virtualisation.docker.enable = true;
+    virtualisation.docker = {
+      enable = true;
+      extraOptions = "--log-level debug --debug";
+    };
+
     environment.systemPackages = with pkgs; [
       pkgs.docker_compose
     ];

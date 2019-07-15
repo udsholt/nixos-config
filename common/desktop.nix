@@ -49,6 +49,7 @@
         pkgs.slack
 
         pkgs.postman
+        pkgs.foreman
 
         pkgs.feh
         pkgs.maim
