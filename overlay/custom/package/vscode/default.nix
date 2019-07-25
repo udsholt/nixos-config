@@ -1,4 +1,4 @@
-{ stdenv, lib, callPackage, fetchurl, isInsiders ? false }:
+{ stdenv, callPackage, fetchurl }:
 
 let
   inherit (stdenv.hostPlatform) system;
@@ -11,31 +11,30 @@ let
   archive_fmt = if system == "x86_64-darwin" then "zip" else "tar.gz";
 
   sha256 = {
-    "x86_64-linux" = "1ck13xpnfklfc81jd8d5md09fcp0gjypacdqj276mzhr5mig29cd";
-    "x86_64-darwin" = "0xpzm372swv0by22saxib16fvvvfjr7d68aj3l5dsl5c9a8v23qj";
+    "x86_64-linux" = "1ay4zvkbln2wf2j1d71mn13b6p2fqvzgz45mzrgaqwsszhbg4xzp";
+    "x86_64-darwin" = "17r9krb1qd92ybx078hkw9zlyym6kbnmbl91vjdilsq77bkf9jmw";
   }.${system};
 in
   callPackage ./generic.nix rec {
 
     version = "1.36.1";
-    pname = "vscode";
+    pname = "vscodium";
 
-    executableName = "code" + lib.optionalString isInsiders "-insiders";
-    longName = "Visual Studio Code" + lib.optionalString isInsiders " - Insiders";
-    shortName = "Code" + lib.optionalString isInsiders " - Insiders";
+    executableName = "codium";
+    longName = "VSCodium";
+    shortName = "Codium";
 
     src = fetchurl {
-      name = "VSCode_${version}_${plat}.${archive_fmt}";
-      url = "https://vscode-update.azurewebsites.net/${version}/${plat}/stable";
+      url = "https://github.com/VSCodium/vscodium/releases/download/${version}/VSCodium-${plat}-${version}.${archive_fmt}";
       inherit sha256;
     };
 
-    sourceRoot = "";
+    sourceRoot = ".";
 
     meta = with stdenv.lib; {
       description = ''
         Open source source code editor developed by Microsoft for Windows,
-        Linux and macOS
+        Linux and macOS (VS Code without MS branding/telemetry/licensing)
       '';
       longDescription = ''
         Open source source code editor developed by Microsoft for Windows,
@@ -44,10 +43,10 @@ in
         and code refactoring. It is also customizable, so users can change the
         editor's theme, keyboard shortcuts, and preferences
       '';
-      homepage = https://code.visualstudio.com/;
-      downloadPage = https://code.visualstudio.com/Updates;
-      license = licenses.unfree;
-      maintainers = with maintainers; [ eadwu synthetica ];
+      homepage = https://github.com/VSCodium/vscodium;
+      downloadPage = https://github.com/VSCodium/vscodium/releases;
+      license = licenses.mit;
+      maintainers = with maintainers; [];
       platforms = [ "x86_64-linux" "x86_64-darwin" ];
     };
   }

@@ -12,8 +12,7 @@
         ./common/golang.nix
         ./common/node.nix
         ./common/steam.nix
-
-        ./container/redis.nix
+        ./common/docker.nix
     ];
 
     environment.systemPackages = with pkgs; [
@@ -29,14 +28,5 @@
 
         pkgs.python
         pkgs.gcc
-
-        #pkgs.dropbox
-        #pkgs.gqview
-        #pkgs.glsl-debugger
-        #pkgs.apitrace
-        #pkgs.libreoffice
-        #pkgs.gpicview
-        #pkgs.kdbg
-        #pkgs.flatcc
     ];
 }
