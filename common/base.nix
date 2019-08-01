@@ -25,6 +25,7 @@
         unzip
         zip
         nox
+        sysstat
         binutils
         pciutils
         sshuttle
