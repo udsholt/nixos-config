@@ -12,4 +12,8 @@
         ./common/golang.nix
         ./common/docker.nix
     ];
+
+    environment.systemPackages = with pkgs; [
+        pkgs.redis
+    ];
 }
