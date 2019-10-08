@@ -38,6 +38,9 @@
 
         python
 
+        protobuf
+        go-protobuf
+
         neovim
         gnumake
 
