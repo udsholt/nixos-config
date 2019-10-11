@@ -25,13 +25,16 @@
         unzip
         zip
         nox
-        sysstat
         binutils
         pciutils
         sshuttle
         pv
         jq
         yadm
+
+        htop
+        iotop
+        sysstat
 
         dnsutils # nslookup, dig, etc.
         whois
