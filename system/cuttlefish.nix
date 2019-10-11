@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    system.stateVersion = "19.03";
+    system.stateVersion = "19.09";
 
     virtualisation.vmware.guest.enable = true;
 
