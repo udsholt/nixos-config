@@ -14,6 +14,9 @@ Change channel with:
 
     $ nix-channel --add https://nixos.org/channels/nixos-17.09 nixos
 
+Timesync issue when upgrading to 19.09: https://github.com/NixOS/nixpkgs/issues/31540
+
+    rm -rf {/var/lib/systemd/timesync,/var/lib/private/systemd/timesync}
 
 ## Helpers
 

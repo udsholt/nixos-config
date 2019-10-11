@@ -89,11 +89,13 @@
 
     # Redshift screen adjustment as systemd user service
     services = {
+        /*
         redshift = {
             enable = true;
             latitude = "55.8";
             longitude = "12.6";
         };
+        */
 
         compton = {
             enable = true;
