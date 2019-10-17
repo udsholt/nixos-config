@@ -43,6 +43,8 @@
 
         protobuf
         go-protobuf
+        grpcurl
+        grpcui
 
         neovim
         gnumake
