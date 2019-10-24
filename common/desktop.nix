@@ -42,7 +42,7 @@
         pkgs.xeventbind
 
         pkgs.sublime3
-        pkgs.vscode
+        pkgs.vscodium
         #pkgs.neovim
         #pkgs.neovim-qt
 

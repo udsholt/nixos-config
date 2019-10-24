@@ -33,7 +33,7 @@ self: super:
     # temporary override for dep, the current version is ancient
     dep = super.callPackage ./package/godep {};
 
-    vscode = super.callPackage ./package/vscode {};
+    vscodium = super.callPackage ./package/vscodium {};
 
     xeventbind = super.callPackage ./package/xeventbind {
         libX11 = super.xorg.libX11;
